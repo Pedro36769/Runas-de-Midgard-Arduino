@@ -40,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -207,6 +207,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Banner_Hrothgar
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 2048
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fbcf713fd81a0940bce517229f8e786
+      internalID: -1184020161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -226,6 +248,7 @@ TextureImporter:
       Banner_Bjorn: -1583621263
       Banner_Carteiro: 8092928862833061227
       Banner_Eydis: 7364148634152971916
+      Banner_Hrothgar: -1184020161
       Banners_3: 1678014666
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

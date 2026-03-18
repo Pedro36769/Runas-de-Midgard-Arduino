@@ -8,9 +8,14 @@ public class BattleManager : MonoBehaviour
 {
     private bool twoPlayers;
     private int playersInCombat;
+
+    [Header("UI de Combate")]
     [SerializeField] private GameObject battleCanvas;
     [SerializeField] private Image attackingPlayerImg;
     [SerializeField] private TMP_Text attackingPlayerText;
+
+    [Header("Configuração de Alvos")]
+    [SerializeField] private TargetButtonUI[] targetButtons;
 
     [Header("Player cards")]
     [SerializeField] private PlayerCardUI player1Card;
@@ -32,15 +37,8 @@ public class BattleManager : MonoBehaviour
     private void Awake()
     {
         //singleton
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
+        if (Instance != null && Instance != this) Destroy(this.gameObject);
+        else { Instance = this; DontDestroyOnLoad(this.gameObject); }
     }
 
     private void Start()
@@ -65,6 +63,7 @@ public class BattleManager : MonoBehaviour
         }
         
         battleCanvas.SetActive(false);
+        foreach (var btn in targetButtons) btn.gameObject.SetActive(false);
     }
 
     public void BattleLogic()
@@ -100,18 +99,20 @@ public class BattleManager : MonoBehaviour
         foreach (PlayerCardUI attacker in alivePlayers)
         {
             currentAttacker = attacker;
-
-            // atualiza a UI baseada em quem está atacando
-            attackingPlayerImg.sprite = currentAttacker.portraitImage.sprite;
-            attackingPlayerText.text = "Mostre a tela para o jogador: " + currentAttacker.cardName;
+            UpdateAttackerUI();
+            SetupTargetOptions(attacker);
 
             isWaitingForTargetSelection = true;
-
-            // pausa a execução deste loop ATÉ que a variável isWaitingForTargetSelection vire false
             yield return new WaitWhile(() => isWaitingForTargetSelection);
         }
 
         ResolveDamage();
+    }
+
+    private void UpdateAttackerUI()
+    {
+        attackingPlayerImg.sprite = currentAttacker.portraitImage.sprite;
+        attackingPlayerText.text = "Vez de " + currentAttacker.cardName;
     }
 
     public void SetTarget(PlayerCardUI targetCard)
@@ -122,6 +123,25 @@ public class BattleManager : MonoBehaviour
         isWaitingForTargetSelection = false;
     }
 
+    private void SetupTargetOptions(PlayerCardUI attacker)
+    {
+        // desativa todos os botões primeiro 
+        foreach (var btn in targetButtons) btn.gameObject.SetActive(false);
+
+        int buttonIndex = 0;
+        foreach (PlayerCardUI potentialTarget in alivePlayers)
+        {
+            // o jogador não pode atacar a si mesmo
+            if (potentialTarget == attacker) continue;
+
+            if (buttonIndex < targetButtons.Length)
+            {
+                targetButtons[buttonIndex].Setup(potentialTarget);
+                buttonIndex++;
+            }
+        }
+    }
+
     private void ResolveDamage()
     {
         foreach (KeyValuePair<PlayerCardUI, PlayerCardUI> combatPair in attackTargets)
@@ -129,23 +149,13 @@ public class BattleManager : MonoBehaviour
             PlayerCardUI attacker = combatPair.Key;
             PlayerCardUI target = combatPair.Value;
 
-            int attackPower = attacker.currentDmg;
-            int defensePower = target.currentDef;
+            int finalDamage = Mathf.Max(0, attacker.currentDmg - target.currentDef);
 
-            // Mathf.Max impede que o dano seja negativo se a defesa for maior que o ataque
-            int finalDamage = Mathf.Max(0, attackPower - defensePower);
-
-            // aplica o dano na vida do alvo correspondente
-            if (target == player1Card) player1Hp -= finalDamage;
-            else if (target == player2Card) player2Hp -= finalDamage;
-            else if (target == player3Card) player3Hp -= finalDamage;
-            else if (target == player4Card) player4Hp -= finalDamage;
-            
-            Debug.Log($"{attacker.cardName} atacou {target.cardName}! (Ataque: {attackPower} - Defesa: {defensePower} = {finalDamage} de dano causado)");
+            target.TakeDamage(finalDamage);
+            target.ChangeHealth(target.currentHp.ToString());
         }
 
-        attackTargets.Clear();
         battleCanvas.SetActive(false);
-        Debug.Log("Combate acabou.");
+        Debug.Log("Combate resolvido e UI atualizada.");
     }
 }

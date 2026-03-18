@@ -5,7 +5,7 @@ using TMPro;
 public class PlayerCardUI : MonoBehaviour
 {
     public Image portraitImage;
-    [SerializeField] private Image bannerImage;
+    public Image bannerImage;
     [SerializeField] private TMP_Text nameText;
     public string cardName;
     [SerializeField] private bool setupOnStart;
