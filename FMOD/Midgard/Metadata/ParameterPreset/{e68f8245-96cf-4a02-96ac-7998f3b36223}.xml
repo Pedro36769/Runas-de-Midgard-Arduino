@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{e68f8245-96cf-4a02-96ac-7998f3b36223}">
+		<property name="name">
+			<value>mobiusPlucks</value>
+		</property>
+		<relationship name="folder">
+			<destination>{31b446b5-1572-421c-be97-5280253ef6e2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{3c1f8ce1-edde-41d6-b225-9e3a41e51a08}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{3c1f8ce1-edde-41d6-b225-9e3a41e51a08}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

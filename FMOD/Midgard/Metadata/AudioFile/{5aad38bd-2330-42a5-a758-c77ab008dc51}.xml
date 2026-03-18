@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{5aad38bd-2330-42a5-a758-c77ab008dc51}">
+		<property name="assetPath">
+			<value>_ocean_tide___2021-09-25_205723.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>32.391836734693875</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ec8a8beb-6b3a-4434-963c-d3bcd2185a89}</destination>
+		</relationship>
+	</object>
+</objects>
