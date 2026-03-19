@@ -1,10 +1,13 @@
-**Runas do Midgard** é um jogo de tabuleiro estratégico com temática Viking, no  qual até quatro jogadores assumem o papel de guerreiros que disputam poder  através de runas ancestrais concedidas por um altar místico. 
-O jogo integra elementos físicos (tabuleiro, cartas e altar com sensor magnético e  LED Ring) com um aplicativo desenvolvido na Unity, responsável por registrar  atributos, inventário e eventos globais. 
-O objetivo principal do jogo é ser o último Viking sobrevivente. 
+# Runas de Midgard 
+É um jogo de tabuleiro estratégico com temática Viking, no qual dois a quatro jogadores assumem o papel de guerreiros que disputam poder através de runas ancestrais concedidas por um altar místico. 
+O jogo integra elementos físicos (_tabuleiro, cartas e altar com sensor magnético e  LED Ring_) com um aplicativo Android desenvolvido na Unity, responsável por registrar  atributos, inventário e eventos globais. 
+**O objetivo principal do jogo é ser o último Viking sobrevivente.**
 
 Para a implementação do áudio, usaremos FMOD para garantir música e efeitos sonoros dinâmicos.
 
-**Hardware**
+*******
+
+### **Hardware**
 O altar utiliza:
 - Sensor Magnético para detectar a presença da peça.
 - Resistor 10kΩ
@@ -15,6 +18,6 @@ O altar utiliza:
 - Arduino NANO ou UNO escondido abaixo do altar.
 - Sensor de toque
 
-LED Ring: (WCMCU-2812B-12)
+**LED Ring**: (_WCMCU-2812B-12_)
 Cada LED, em seu brilho máximo, chega a uma corrente de 50mA. Portanto, o máximo que o LED Ring pode precisar são 0,6A. 
 Colocaremos um resistor 470Ω entre o pino 7 e a entrada DI para evitar que picos de tensão danifiquem o componente.
