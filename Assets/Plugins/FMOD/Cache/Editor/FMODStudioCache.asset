@@ -279,33 +279,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-2561066872642579818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFXs/NextRound
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFXs/NextRound
-  Guid:
-    Data1: -1828624883
-    Data2: 1217707127
-    Data3: -832228176
-    Data4: 1880475271
-  Banks:
-  - {fileID: 1593385495771005620}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 80
 --- !u!114 &-1216304645940980666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,6 +351,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-399058099910883945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFXs/GenericClick
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFXs/GenericClick
+  Guid:
+    Data1: -1828624883
+    Data2: 1217707127
+    Data3: -832228176
+    Data4: 1880475271
+  Banks:
+  - {fileID: 1593385495771005620}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 80
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,7 +399,6 @@ MonoBehaviour:
   - {fileID: -4695378076749612527}
   - {fileID: 6136842563373015094}
   - {fileID: -5865006583687356461}
-  - {fileID: -2561066872642579818}
   - {fileID: -8918773864800955528}
   - {fileID: 3367754157965058791}
   - {fileID: 6726212911096762325}
@@ -408,13 +407,15 @@ MonoBehaviour:
   - {fileID: -9045143039681945400}
   - {fileID: 8933975580335065535}
   - {fileID: 867499156086362186}
+  - {fileID: -399058099910883945}
+  - {fileID: 4760923236853542238}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1593385495771005620}
   StringsBanks:
   - {fileID: 2580205003124018359}
   cacheVersion: 131858
-  cacheTime: 639094203628864541
+  cacheTime: 639094585060259012
   SerializableEventsDict:
   - key: event:/SFXs/Ragnarok
     index: 0
@@ -426,24 +427,26 @@ MonoBehaviour:
     index: 3
   - key: event:/SFXs/BattleStart
     index: 4
-  - key: event:/SFXs/NextRound
-    index: 5
   - key: event:/SFXs/RiskyCharge
-    index: 6
+    index: 5
   - key: event:/SFXs/RuneAncient
-    index: 7
+    index: 6
   - key: event:/SFXs/RuneGood
-    index: 8
+    index: 7
   - key: event:/SFXs/RuneBad
-    index: 9
+    index: 8
   - key: event:/SFXs/RuneCurse
-    index: 10
+    index: 9
   - key: event:/SFXs/TidesSound
-    index: 11
+    index: 10
   - key: event:/SFXs/HuntSound
-    index: 12
+    index: 11
   - key: event:/Songs/SetupSong
+    index: 12
+  - key: event:/SFXs/GenericClick
     index: 13
+  - key: event:/SFXs/HabilityUse
+    index: 14
 --- !u!114 &867499156086362186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,10 +491,10 @@ MonoBehaviour:
   Path: FMOD/Midgard/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639094203628814467
+  lastModified: 639094585060243836
   FileSizes:
   - Name: Desktop
-    Value: 14378048
+    Value: 14378368
   Exists: 1
 --- !u!114 &1759352468675033762
 MonoBehaviour:
@@ -559,10 +562,10 @@ MonoBehaviour:
   Path: FMOD/Midgard/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639094203628864541
+  lastModified: 639094585060259012
   FileSizes:
   - Name: Desktop
-    Value: 1892
+    Value: 1948
   Exists: 1
 --- !u!114 &3367754157965058791
 MonoBehaviour:
@@ -615,6 +618,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &4760923236853542238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFXs/HabilityUse
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFXs/HabilityUse
+  Guid:
+    Data1: -1468226212
+    Data2: 1277204033
+    Data3: -2091948100
+    Data4: 1239722682
+  Banks:
+  - {fileID: 1593385495771005620}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5824138552945644773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,7 +671,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 4700
+  Length: 8600
 --- !u!114 &6136842563373015094
 MonoBehaviour:
   m_ObjectHideFlags: 0

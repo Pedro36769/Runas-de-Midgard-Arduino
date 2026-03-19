@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{9301660d-bc77-4894-b034-65ce87c61570}">
 		<property name="name">
-			<value>NextRound</value>
+			<value>GenericClick</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>

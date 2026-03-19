@@ -5,6 +5,8 @@ using TMPro;
 public class PlayerCardUI : MonoBehaviour
 {
     public Image portraitImage;
+    public Image portraitFgImg;
+    public Image portraitBgImg;
     public Image bannerImage;
     [SerializeField] private TMP_Text nameText;
     public string cardName;
@@ -29,16 +31,23 @@ public class PlayerCardUI : MonoBehaviour
     {
         if (characterData == null) return;
 
+        //imagens
         portraitImage.sprite = characterData.characterPortrait;
+        portraitFgImg.sprite = characterData.portraitFg;
+        portraitBgImg.sprite = characterData.portraitBg;
         if(bannerImage!=null) bannerImage.sprite = characterData.characterBanner;
+
+        //textos
         cardName = characterData.playerName;
         nameText.text = cardName;
-
+            
         currentHp = characterData.health;
         if(hpText!=null) hpText.text = currentHp.ToString();
         if(inputHp!=null) inputHp.text = currentHp.ToString();
+
         currentDmg = characterData.damage;
         if(dmgText!=null) dmgText.text = currentDmg.ToString();
+
         currentDef = characterData.defense;
         if(defText!=null) defText.text = currentDef.ToString();
     }
