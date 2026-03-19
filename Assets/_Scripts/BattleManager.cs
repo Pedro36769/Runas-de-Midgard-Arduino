@@ -8,6 +8,7 @@ public class BattleManager : MonoBehaviour
 {
     private bool twoPlayers;
     private int playersInCombat;
+    [SerializeField] private GameObject confirmAttackObj;
 
     [Header("UI de Combate")]
     [SerializeField] private GameObject battleCanvas;
@@ -44,6 +45,7 @@ public class BattleManager : MonoBehaviour
     private void Start()
     {
         battleCanvas.SetActive(false);
+        confirmAttackObj.SetActive(false);
 
         twoPlayers = SetupManager.Instance.twoPlayerMode;
         playersInCombat = twoPlayers ? 2 : 4;
@@ -118,6 +120,7 @@ public class BattleManager : MonoBehaviour
     public void SetTarget(PlayerCardUI targetCard)
     {
         if (!isWaitingForTargetSelection) return;
+        Debug.Log(currentAttacker.cardName + " vai atacar: " + targetCard.cardName);
 
         attackTargets.Add(currentAttacker, targetCard);
         isWaitingForTargetSelection = false;

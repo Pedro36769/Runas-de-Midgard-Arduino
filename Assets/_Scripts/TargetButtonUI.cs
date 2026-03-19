@@ -8,6 +8,7 @@ public class TargetButtonUI : MonoBehaviour
     [SerializeField] private Image banner;
     [SerializeField] private TMP_Text nameText;
     [SerializeField] private TMP_Text hpText;
+    [SerializeField] private TargetButtonUI selectedTarget;
     private PlayerCardUI targetReference;
 
     public void Setup(PlayerCardUI target)
@@ -24,5 +25,10 @@ public class TargetButtonUI : MonoBehaviour
     {
         // fala pro BattleManager quem foi o escolhido
         BattleManager.Instance.SetTarget(targetReference);
+    }
+
+    public void ShowSelectedTarget()
+    {
+        selectedTarget.Setup(targetReference);
     }
 }
