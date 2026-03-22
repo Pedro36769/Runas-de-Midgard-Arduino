@@ -105,6 +105,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1091
+--- !u!114 &-7275994582326808617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Wind
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Ambient/Wind
+  Guid:
+    Data1: -478805248
+    Data2: 1111283151
+    Data3: -452703611
+    Data4: -1357266874
+  Banks:
+  - {fileID: 1593385495771005620}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11942
 --- !u!114 &-5865006583687356461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,13 +179,13 @@ MonoBehaviour:
     Data4: 1020788199
   Banks:
   - {fileID: 1593385495771005620}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2500
+  Length: 1949
 --- !u!114 &-4610873917182921517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,13 +436,14 @@ MonoBehaviour:
   - {fileID: 867499156086362186}
   - {fileID: -399058099910883945}
   - {fileID: 4760923236853542238}
+  - {fileID: -7275994582326808617}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1593385495771005620}
   StringsBanks:
   - {fileID: 2580205003124018359}
   cacheVersion: 131858
-  cacheTime: 639095085143856430
+  cacheTime: 639095383003936086
   SerializableEventsDict:
   - key: event:/SFXs/Ragnarok
     index: 0
@@ -447,6 +475,8 @@ MonoBehaviour:
     index: 13
   - key: event:/SFXs/HabilityUse
     index: 14
+  - key: event:/Ambient/Wind
+    index: 15
 --- !u!114 &867499156086362186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,10 +521,10 @@ MonoBehaviour:
   Path: FMOD/Midgard/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639095085143856430
+  lastModified: 639095383003921080
   FileSizes:
   - Name: Desktop
-    Value: 14378368
+    Value: 13415040
   Exists: 1
 --- !u!114 &1759352468675033762
 MonoBehaviour:
@@ -562,10 +592,10 @@ MonoBehaviour:
   Path: FMOD/Midgard/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639095085143856430
+  lastModified: 639095383003936086
   FileSizes:
   - Name: Desktop
-    Value: 1948
+    Value: 2002
   Exists: 1
 --- !u!114 &3367754157965058791
 MonoBehaviour:

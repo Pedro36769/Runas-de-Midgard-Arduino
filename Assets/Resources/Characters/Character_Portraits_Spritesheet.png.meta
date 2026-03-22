@@ -262,7 +262,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Portraits_Spritesheet_5
+      name: Sanguessuga_pfp
       rect:
         serializedVersion: 2
         x: 2000
@@ -302,9 +302,9 @@ TextureImporter:
       Bjorn_pfp: -696387706
       Carteiro_pfp: 1390216330
       Character_Portraits_Spritesheet_4: -646902602
-      Character_Portraits_Spritesheet_5: 2050889645
       Eydis_pfp: 1449826127
       Placeholder_pfp: 706338885
+      Sanguessuga_pfp: 2050889645
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

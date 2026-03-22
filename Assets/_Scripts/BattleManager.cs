@@ -14,6 +14,8 @@ public class BattleManager : MonoBehaviour
     [SerializeField] private GameObject battleCanvas;
     [SerializeField] private Image attackingPlayerImg;
     [SerializeField] private TMP_Text attackingPlayerText;
+    [SerializeField] private GameObject battleParticle;
+    [SerializeField] private GameObject mainElements;
 
     [Header("Configuração de Alvos")]
     [SerializeField] private TargetButtonUI[] targetButtons;
@@ -44,8 +46,10 @@ public class BattleManager : MonoBehaviour
 
     private void Start()
     {
+        mainElements.SetActive(true);
         battleCanvas.SetActive(false);
         confirmAttackObj.SetActive(false);
+        battleParticle.SetActive(false);
 
         twoPlayers = SetupManager.Instance.twoPlayerMode;
         playersInCombat = twoPlayers ? 2 : 4;
@@ -64,13 +68,14 @@ public class BattleManager : MonoBehaviour
             player4Hp = player4Card.currentHp; 
         }
         
-        battleCanvas.SetActive(false);
         foreach (var btn in targetButtons) btn.gameObject.SetActive(false);
     }
 
     public void BattleLogic()
     {
+        mainElements.SetActive(false);
         battleCanvas.SetActive(true);
+        battleParticle.SetActive(true);
         StartCoroutine(BattleRoutine());
     }
 
@@ -159,6 +164,8 @@ public class BattleManager : MonoBehaviour
         }
 
         battleCanvas.SetActive(false);
+        battleParticle.SetActive(false);
+        mainElements.SetActive(true);
         Debug.Log("Combate resolvido e UI atualizada.");
     }
 }

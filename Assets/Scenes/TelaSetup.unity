@@ -1779,7 +1779,7 @@ MonoBehaviour:
   m_text: Cancelar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2365,7 +2365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 210822264}
   m_Layer: 5
-  m_Name: Default 2
+  m_Name: Sanguessuga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4804,7 +4804,7 @@ MonoBehaviour:
   m_text: "Habilidade \u2014 T\xEDtulo da Habilidade"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6346,7 +6346,7 @@ MonoBehaviour:
     Lorem ipsum Lorem ipsum Lorem ipsum '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6572,7 +6572,7 @@ GameObject:
   - component: {fileID: 549579876}
   - component: {fileID: 549579875}
   m_Layer: 5
-  m_Name: Default 3 Expanded Canvas
+  m_Name: Sanguessuga Expanded Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7402,7 +7402,7 @@ GameObject:
   - component: {fileID: 592849772}
   - component: {fileID: 592849771}
   m_Layer: 5
-  m_Name: Escolher Bjorn
+  m_Name: Escolher Sanguessuga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7424,8 +7424,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -408.48102}
-  m_SizeDelta: {x: 571.937, y: 100.134}
+  m_AnchoredPosition: {x: -7.7445, y: -408.48102}
+  m_SizeDelta: {x: 587.42, y: 100.134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &592849771
 MonoBehaviour:
@@ -7447,10 +7447,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Escolher Default?
+  m_text: Escolher Sanguessuga?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7474,7 +7474,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 59.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8184,7 +8184,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Default
+  m_text: Sanguessuga
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
@@ -8211,10 +8211,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 24.35
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -8740,7 +8740,7 @@ MonoBehaviour:
   m_text: Cancelar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8877,7 +8877,7 @@ MonoBehaviour:
   m_text: 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -10050,7 +10050,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Default
+          m_StringArgument: Sanguessuga
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1554595227}
@@ -10766,7 +10766,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Default
+  m_text: "Ca\xF3tica"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
@@ -13088,7 +13088,7 @@ MonoBehaviour:
   m_text: Confirmar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14038,7 +14038,7 @@ MonoBehaviour:
   m_text: Confirmar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15201,7 +15201,7 @@ GameObject:
   - component: {fileID: 1195085486}
   - component: {fileID: 1195085485}
   m_Layer: 5
-  m_Name: Default 4 Expanded Canvas
+  m_Name: Caotica Expanded Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15594,10 +15594,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SetupManager
   allAvailableCharacters:
   - {fileID: 11400000, guid: 85b0f85aa286d1d44abd23d37a8f75dd, type: 2}
+  - {fileID: 11400000, guid: 4ddf3b7d943ef40438ee2952857d934c, type: 2}
+  - {fileID: 11400000, guid: 0620a1abdcc3b1346ab3de3edb4a2552, type: 2}
   - {fileID: 11400000, guid: 7f5505579ec6d114a862a84c472bf147, type: 2}
-  - {fileID: 11400000, guid: 2e6ca768863d2dd4da3f5123cb7fb5ab, type: 2}
-  - {fileID: 11400000, guid: 7637583c1a93db448b2f11a411700b45, type: 2}
   - {fileID: 11400000, guid: fd6470edf2dfe1b45af489753ad31b98, type: 2}
+  - {fileID: 11400000, guid: a9f3cf95b518ba6419b0d1e68fce50c1, type: 2}
   playerNumberText: {fileID: 1002212973}
   playerNumberScreen: {fileID: 397105321}
   continueToCharacterBtn: {fileID: 315104687}
@@ -15839,7 +15840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1291796758}
   m_Layer: 5
-  m_Name: Default 3
+  m_Name: Caotica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15929,7 +15930,7 @@ MonoBehaviour:
   nameText: {fileID: 881243204}
   cardName: 
   setupOnStart: 1
-  characterData: {fileID: 11400000, guid: 2e6ca768863d2dd4da3f5123cb7fb5ab, type: 2}
+  characterData: {fileID: 11400000, guid: 4ddf3b7d943ef40438ee2952857d934c, type: 2}
   hpText: {fileID: 240542084}
   inputHp: {fileID: 0}
   currentHp: 0
@@ -16280,7 +16281,7 @@ MonoBehaviour:
   m_text: "Habilidade \u2014 T\xEDtulo da Habilidade"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17372,7 +17373,7 @@ MonoBehaviour:
     Lorem ipsum Lorem ipsum Lorem ipsum '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -19227,7 +19228,7 @@ MonoBehaviour:
   m_text: 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20017,7 +20018,7 @@ MonoBehaviour:
   nameText: {fileID: 1104788631}
   cardName: 
   setupOnStart: 1
-  characterData: {fileID: 11400000, guid: 7637583c1a93db448b2f11a411700b45, type: 2}
+  characterData: {fileID: 11400000, guid: 0620a1abdcc3b1346ab3de3edb4a2552, type: 2}
   hpText: {fileID: 135822659}
   inputHp: {fileID: 0}
   currentHp: 0
@@ -20997,7 +20998,7 @@ MonoBehaviour:
   nameText: {fileID: 649705917}
   cardName: 
   setupOnStart: 1
-  characterData: {fileID: 11400000, guid: 2e6ca768863d2dd4da3f5123cb7fb5ab, type: 2}
+  characterData: {fileID: 11400000, guid: a9f3cf95b518ba6419b0d1e68fce50c1, type: 2}
   hpText: {fileID: 2090024175}
   inputHp: {fileID: 0}
   currentHp: 0
@@ -23098,7 +23099,7 @@ GameObject:
   - component: {fileID: 1943403336}
   - component: {fileID: 1943403335}
   m_Layer: 5
-  m_Name: Escolher Bjorn
+  m_Name: Escolher Caotica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23143,10 +23144,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Escolher Default?
+  m_text: "Escolher Ca\xF3tica?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -23170,7 +23171,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 71.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -25047,7 +25048,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Default
+          m_StringArgument: Caotica
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1554595227}
