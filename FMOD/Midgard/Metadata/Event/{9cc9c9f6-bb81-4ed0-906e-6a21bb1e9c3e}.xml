@@ -102,6 +102,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{8dd8d696-ce74-43d3-a54b-48cb36febc84}">
+		<property name="volume">
+			<value>-1.5</value>
+		</property>
 		<property name="name">
 			<value>CurseRune</value>
 		</property>

@@ -468,7 +468,7 @@ MonoBehaviour:
     Vida."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -755,7 +755,7 @@ MonoBehaviour:
   m_text: Cancelar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1101,7 +1101,7 @@ MonoBehaviour:
   m_text: Cancelar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1238,7 +1238,7 @@ MonoBehaviour:
   m_text: Confirmar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1449,6 +1449,7 @@ GameObject:
   - component: {fileID: 128500893}
   - component: {fileID: 128500892}
   - component: {fileID: 128500891}
+  - component: {fileID: 128500894}
   m_Layer: 5
   m_Name: Cancel Btn
   m_TagString: Untagged
@@ -1582,6 +1583,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128500889}
   m_CullTransparentMesh: 1
+--- !u!114 &128500894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128500889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1108291053
+      Data2: 1254805830
+      Data3: 1261688192
+      Data4: -224158554
+    Path: event:/SFXs/BackWooden
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &135822657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1779,7 +1811,7 @@ MonoBehaviour:
   m_text: Cancelar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2365,7 +2397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 210822264}
   m_Layer: 5
-  m_Name: Default 2
+  m_Name: Sanguessuga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2451,7 +2483,7 @@ MonoBehaviour:
   m_text: Confirmar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2937,6 +2969,7 @@ GameObject:
   - component: {fileID: 280464075}
   - component: {fileID: 280464074}
   - component: {fileID: 280464073}
+  - component: {fileID: 280464076}
   m_Layer: 5
   m_Name: Cancel Btn
   m_TagString: Untagged
@@ -3070,6 +3103,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280464071}
   m_CullTransparentMesh: 1
+--- !u!114 &280464076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280464071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1108291053
+      Data2: 1254805830
+      Data3: 1261688192
+      Data4: -224158554
+    Path: event:/SFXs/BackWooden
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &288949036
 GameObject:
   m_ObjectHideFlags: 0
@@ -3133,7 +3197,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3379,6 +3443,7 @@ GameObject:
   - component: {fileID: 315104691}
   - component: {fileID: 315104690}
   - component: {fileID: 315104689}
+  - component: {fileID: 315104692}
   m_Layer: 5
   m_Name: Continue Btn
   m_TagString: Untagged
@@ -3512,6 +3577,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315104687}
   m_CullTransparentMesh: 1
+--- !u!114 &315104692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315104687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1828624883
+      Data2: 1217707127
+      Data3: -832228176
+      Data4: 1880475271
+    Path: event:/SFXs/GenericClick
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &340848441
 GameObject:
   m_ObjectHideFlags: 0
@@ -3736,6 +3832,7 @@ GameObject:
   - component: {fileID: 355475846}
   - component: {fileID: 355475845}
   - component: {fileID: 355475844}
+  - component: {fileID: 355475847}
   m_Layer: 5
   m_Name: Expand Btn
   m_TagString: Untagged
@@ -3868,6 +3965,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355475842}
   m_CullTransparentMesh: 1
+--- !u!114 &355475847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355475842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1828624883
+      Data2: 1217707127
+      Data3: -832228176
+      Data4: 1880475271
+    Path: event:/SFXs/GenericClick
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &360966197
 GameObject:
   m_ObjectHideFlags: 0
@@ -4804,7 +4932,7 @@ MonoBehaviour:
   m_text: "Habilidade \u2014 T\xEDtulo da Habilidade"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5928,6 +6056,7 @@ GameObject:
   - component: {fileID: 527763766}
   - component: {fileID: 527763765}
   - component: {fileID: 527763764}
+  - component: {fileID: 527763767}
   m_Layer: 5
   m_Name: Cancel Btn
   m_TagString: Untagged
@@ -6061,6 +6190,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527763762}
   m_CullTransparentMesh: 1
+--- !u!114 &527763767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527763762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1108291053
+      Data2: 1254805830
+      Data3: 1261688192
+      Data4: -224158554
+    Path: event:/SFXs/BackWooden
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &534951863
 GameObject:
   m_ObjectHideFlags: 0
@@ -6153,6 +6313,7 @@ GameObject:
   - component: {fileID: 539363586}
   - component: {fileID: 539363585}
   - component: {fileID: 539363584}
+  - component: {fileID: 539363587}
   m_Layer: 5
   m_Name: Expand Btn
   m_TagString: Untagged
@@ -6285,6 +6446,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539363582}
   m_CullTransparentMesh: 1
+--- !u!114 &539363587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539363582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1828624883
+      Data2: 1217707127
+      Data3: -832228176
+      Data4: 1880475271
+    Path: event:/SFXs/GenericClick
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &543567770
 GameObject:
   m_ObjectHideFlags: 0
@@ -6346,7 +6538,7 @@ MonoBehaviour:
     Lorem ipsum Lorem ipsum Lorem ipsum '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6572,7 +6764,7 @@ GameObject:
   - component: {fileID: 549579876}
   - component: {fileID: 549579875}
   m_Layer: 5
-  m_Name: Default 3 Expanded Canvas
+  m_Name: Sanguessuga Expanded Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6775,7 +6967,7 @@ MonoBehaviour:
   m_text: Escolher Bjorn?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7101,7 +7293,7 @@ MonoBehaviour:
     para a mesma casa que ele, for\xE7ando um combate imediato."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7402,7 +7594,7 @@ GameObject:
   - component: {fileID: 592849772}
   - component: {fileID: 592849771}
   m_Layer: 5
-  m_Name: Escolher Bjorn
+  m_Name: Escolher Sanguessuga
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7424,8 +7616,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -408.48102}
-  m_SizeDelta: {x: 571.937, y: 100.134}
+  m_AnchoredPosition: {x: -7.7445, y: -408.48102}
+  m_SizeDelta: {x: 587.42, y: 100.134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &592849771
 MonoBehaviour:
@@ -7447,10 +7639,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Escolher Default?
+  m_text: Escolher Sanguessuga?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7474,7 +7666,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 59.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7587,7 +7779,7 @@ MonoBehaviour:
   m_text: "Habilidade \u2014 Pescador de Guerreiros:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7837,7 +8029,7 @@ MonoBehaviour:
   m_text: Escolher Hrothgar?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8006,6 +8198,7 @@ GameObject:
   - component: {fileID: 640014656}
   - component: {fileID: 640014655}
   - component: {fileID: 640014654}
+  - component: {fileID: 640014657}
   m_Layer: 5
   m_Name: 2
   m_TagString: Untagged
@@ -8127,6 +8320,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 640014652}
   m_CullTransparentMesh: 1
+--- !u!114 &640014657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640014652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1828624883
+      Data2: 1217707127
+      Data3: -832228176
+      Data4: 1880475271
+    Path: event:/SFXs/GenericClick
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &649705915
 GameObject:
   m_ObjectHideFlags: 0
@@ -8184,7 +8408,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Default
+  m_text: Sanguessuga
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
@@ -8211,10 +8435,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 24.35
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -8740,7 +8964,7 @@ MonoBehaviour:
   m_text: Cancelar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8877,7 +9101,7 @@ MonoBehaviour:
   m_text: 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9089,7 +9313,7 @@ MonoBehaviour:
   m_text: Confirmar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9751,6 +9975,7 @@ GameObject:
   - component: {fileID: 809035223}
   - component: {fileID: 809035222}
   - component: {fileID: 809035221}
+  - component: {fileID: 809035224}
   m_Layer: 5
   m_Name: Expand Btn
   m_TagString: Untagged
@@ -9883,6 +10108,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 809035219}
   m_CullTransparentMesh: 1
+--- !u!114 &809035224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809035219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1828624883
+      Data2: 1217707127
+      Data3: -832228176
+      Data4: 1880475271
+    Path: event:/SFXs/GenericClick
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &819773232
 GameObject:
   m_ObjectHideFlags: 0
@@ -10050,7 +10306,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Default
+          m_StringArgument: Sanguessuga
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1554595227}
@@ -10139,6 +10395,7 @@ GameObject:
   - component: {fileID: 842909783}
   - component: {fileID: 842909782}
   - component: {fileID: 842909781}
+  - component: {fileID: 842909784}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -10271,6 +10528,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842909779}
   m_CullTransparentMesh: 1
+--- !u!114 &842909784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842909779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1108291053
+      Data2: 1254805830
+      Data3: 1261688192
+      Data4: -224158554
+    Path: event:/SFXs/BackWooden
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &843820972
 GameObject:
   m_ObjectHideFlags: 0
@@ -10365,6 +10653,7 @@ GameObject:
   - component: {fileID: 850869781}
   - component: {fileID: 850869780}
   - component: {fileID: 850869779}
+  - component: {fileID: 850869782}
   m_Layer: 5
   m_Name: Expand Btn
   m_TagString: Untagged
@@ -10497,6 +10786,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850869777}
   m_CullTransparentMesh: 1
+--- !u!114 &850869782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850869777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1828624883
+      Data2: 1217707127
+      Data3: -832228176
+      Data4: 1880475271
+    Path: event:/SFXs/GenericClick
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &874781478
 GameObject:
   m_ObjectHideFlags: 0
@@ -10766,7 +11086,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Default
+  m_text: "Ca\xF3tica"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
@@ -11578,7 +11898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 950456948}
   - component: {fileID: 950456947}
-  - component: {fileID: 950456946}
+  - component: {fileID: 950456949}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -11586,26 +11906,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &950456946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 950456945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.StandaloneInputModule
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!114 &950456947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11636,6 +11936,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &950456949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950456945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.UI.InputSystemUIInputModule
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
 --- !u!1 &952701542
 GameObject:
   m_ObjectHideFlags: 0
@@ -11980,6 +12311,7 @@ GameObject:
   - component: {fileID: 976692555}
   - component: {fileID: 976692554}
   - component: {fileID: 976692553}
+  - component: {fileID: 976692556}
   m_Layer: 5
   m_Name: Expand Btn
   m_TagString: Untagged
@@ -12112,6 +12444,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976692551}
   m_CullTransparentMesh: 1
+--- !u!114 &976692556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976692551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1828624883
+      Data2: 1217707127
+      Data3: -832228176
+      Data4: 1880475271
+    Path: event:/SFXs/GenericClick
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &982458109
 GameObject:
   m_ObjectHideFlags: 0
@@ -12250,7 +12613,7 @@ MonoBehaviour:
     por 2 rodadas."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12525,7 +12888,7 @@ MonoBehaviour:
     em 2"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12751,6 +13114,7 @@ GameObject:
   - component: {fileID: 1020678219}
   - component: {fileID: 1020678218}
   - component: {fileID: 1020678217}
+  - component: {fileID: 1020678220}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -12883,6 +13247,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020678215}
   m_CullTransparentMesh: 1
+--- !u!114 &1020678220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020678215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1108291053
+      Data2: 1254805830
+      Data3: 1261688192
+      Data4: -224158554
+    Path: event:/SFXs/BackWooden
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1047853600
 GameObject:
   m_ObjectHideFlags: 0
@@ -12895,6 +13290,7 @@ GameObject:
   - component: {fileID: 1047853604}
   - component: {fileID: 1047853603}
   - component: {fileID: 1047853602}
+  - component: {fileID: 1047853605}
   m_Layer: 5
   m_Name: Cancel Btn
   m_TagString: Untagged
@@ -13028,6 +13424,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1047853600}
   m_CullTransparentMesh: 1
+--- !u!114 &1047853605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047853600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1108291053
+      Data2: 1254805830
+      Data3: 1261688192
+      Data4: -224158554
+    Path: event:/SFXs/BackWooden
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1048474193
 GameObject:
   m_ObjectHideFlags: 0
@@ -13088,7 +13515,7 @@ MonoBehaviour:
   m_text: Confirmar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14038,7 +14465,7 @@ MonoBehaviour:
   m_text: Confirmar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14387,7 +14814,7 @@ MonoBehaviour:
   m_text: "Eyd\xEDs pode usar \"Revelar\" 2x por jogo.\r\nRevelar:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -14524,7 +14951,7 @@ MonoBehaviour:
   m_text: "Habilidade \u2014  Saqueador Veloz"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15057,6 +15484,7 @@ GameObject:
   - component: {fileID: 1185607268}
   - component: {fileID: 1185607267}
   - component: {fileID: 1185607266}
+  - component: {fileID: 1185607269}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -15189,6 +15617,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185607264}
   m_CullTransparentMesh: 1
+--- !u!114 &1185607269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185607264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1108291053
+      Data2: 1254805830
+      Data3: 1261688192
+      Data4: -224158554
+    Path: event:/SFXs/BackWooden
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1195085483
 GameObject:
   m_ObjectHideFlags: 0
@@ -15201,7 +15660,7 @@ GameObject:
   - component: {fileID: 1195085486}
   - component: {fileID: 1195085485}
   m_Layer: 5
-  m_Name: Default 4 Expanded Canvas
+  m_Name: Caotica Expanded Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15356,6 +15815,7 @@ GameObject:
   - component: {fileID: 1252913538}
   - component: {fileID: 1252913537}
   - component: {fileID: 1252913536}
+  - component: {fileID: 1252913539}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -15488,6 +15948,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252913534}
   m_CullTransparentMesh: 1
+--- !u!114 &1252913539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252913534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1108291053
+      Data2: 1254805830
+      Data3: 1261688192
+      Data4: -224158554
+    Path: event:/SFXs/BackWooden
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1257382495
 GameObject:
   m_ObjectHideFlags: 0
@@ -15594,10 +16085,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SetupManager
   allAvailableCharacters:
   - {fileID: 11400000, guid: 85b0f85aa286d1d44abd23d37a8f75dd, type: 2}
+  - {fileID: 11400000, guid: 4ddf3b7d943ef40438ee2952857d934c, type: 2}
+  - {fileID: 11400000, guid: 0620a1abdcc3b1346ab3de3edb4a2552, type: 2}
   - {fileID: 11400000, guid: 7f5505579ec6d114a862a84c472bf147, type: 2}
-  - {fileID: 11400000, guid: 2e6ca768863d2dd4da3f5123cb7fb5ab, type: 2}
-  - {fileID: 11400000, guid: 7637583c1a93db448b2f11a411700b45, type: 2}
   - {fileID: 11400000, guid: fd6470edf2dfe1b45af489753ad31b98, type: 2}
+  - {fileID: 11400000, guid: a9f3cf95b518ba6419b0d1e68fce50c1, type: 2}
   playerNumberText: {fileID: 1002212973}
   playerNumberScreen: {fileID: 397105321}
   continueToCharacterBtn: {fileID: 315104687}
@@ -15839,7 +16331,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1291796758}
   m_Layer: 5
-  m_Name: Default 3
+  m_Name: Caotica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15929,7 +16421,7 @@ MonoBehaviour:
   nameText: {fileID: 881243204}
   cardName: 
   setupOnStart: 1
-  characterData: {fileID: 11400000, guid: 2e6ca768863d2dd4da3f5123cb7fb5ab, type: 2}
+  characterData: {fileID: 11400000, guid: 4ddf3b7d943ef40438ee2952857d934c, type: 2}
   hpText: {fileID: 240542084}
   inputHp: {fileID: 0}
   currentHp: 0
@@ -16099,6 +16591,7 @@ GameObject:
   - component: {fileID: 1302017445}
   - component: {fileID: 1302017444}
   - component: {fileID: 1302017443}
+  - component: {fileID: 1302017446}
   m_Layer: 5
   m_Name: 4
   m_TagString: Untagged
@@ -16220,6 +16713,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302017441}
   m_CullTransparentMesh: 1
+--- !u!114 &1302017446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302017441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1828624883
+      Data2: 1217707127
+      Data3: -832228176
+      Data4: 1880475271
+    Path: event:/SFXs/GenericClick
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1308338969
 GameObject:
   m_ObjectHideFlags: 0
@@ -16280,7 +16804,7 @@ MonoBehaviour:
   m_text: "Habilidade \u2014 T\xEDtulo da Habilidade"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16933,6 +17457,7 @@ GameObject:
   - component: {fileID: 1395164426}
   - component: {fileID: 1395164425}
   - component: {fileID: 1395164424}
+  - component: {fileID: 1395164427}
   m_Layer: 5
   m_Name: Return Btn
   m_TagString: Untagged
@@ -17053,6 +17578,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395164422}
   m_CullTransparentMesh: 1
+--- !u!114 &1395164427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395164422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1828624883
+      Data2: 1217707127
+      Data3: -832228176
+      Data4: 1880475271
+    Path: event:/SFXs/GenericClick
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1402889722
 GameObject:
   m_ObjectHideFlags: 0
@@ -17178,6 +17734,7 @@ GameObject:
   - component: {fileID: 1407535519}
   - component: {fileID: 1407535518}
   - component: {fileID: 1407535517}
+  - component: {fileID: 1407535520}
   m_Layer: 5
   m_Name: ChooseAgain Btn
   m_TagString: Untagged
@@ -17311,6 +17868,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407535515}
   m_CullTransparentMesh: 1
+--- !u!114 &1407535520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407535515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1108291053
+      Data2: 1254805830
+      Data3: 1261688192
+      Data4: -224158554
+    Path: event:/SFXs/BackWooden
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1414004299
 GameObject:
   m_ObjectHideFlags: 0
@@ -17372,7 +17960,7 @@ MonoBehaviour:
     Lorem ipsum Lorem ipsum Lorem ipsum '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18224,6 +18812,7 @@ GameObject:
   - component: {fileID: 1514332166}
   - component: {fileID: 1514332165}
   - component: {fileID: 1514332164}
+  - component: {fileID: 1514332167}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -18356,6 +18945,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514332162}
   m_CullTransparentMesh: 1
+--- !u!114 &1514332167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514332162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1108291053
+      Data2: 1254805830
+      Data3: 1261688192
+      Data4: -224158554
+    Path: event:/SFXs/BackWooden
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1514766896
 GameObject:
   m_ObjectHideFlags: 0
@@ -18681,7 +19301,7 @@ MonoBehaviour:
   m_text: Cancelar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -19227,7 +19847,7 @@ MonoBehaviour:
   m_text: 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20017,7 +20637,7 @@ MonoBehaviour:
   nameText: {fileID: 1104788631}
   cardName: 
   setupOnStart: 1
-  characterData: {fileID: 11400000, guid: 7637583c1a93db448b2f11a411700b45, type: 2}
+  characterData: {fileID: 11400000, guid: 0620a1abdcc3b1346ab3de3edb4a2552, type: 2}
   hpText: {fileID: 135822659}
   inputHp: {fileID: 0}
   currentHp: 0
@@ -20085,7 +20705,7 @@ MonoBehaviour:
   m_text: "Escolher Eyd\xEDs?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20222,7 +20842,7 @@ MonoBehaviour:
   m_text: Confirmar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20856,7 +21476,7 @@ MonoBehaviour:
   m_text: Escolher Carteiro?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -20997,7 +21617,7 @@ MonoBehaviour:
   nameText: {fileID: 649705917}
   cardName: 
   setupOnStart: 1
-  characterData: {fileID: 11400000, guid: 2e6ca768863d2dd4da3f5123cb7fb5ab, type: 2}
+  characterData: {fileID: 11400000, guid: a9f3cf95b518ba6419b0d1e68fce50c1, type: 2}
   hpText: {fileID: 2090024175}
   inputHp: {fileID: 0}
   currentHp: 0
@@ -21065,7 +21685,7 @@ MonoBehaviour:
   m_text: "Habilidade \u2014 Tecel\xE3 do Destino"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -22354,6 +22974,7 @@ GameObject:
   - component: {fileID: 1864854305}
   - component: {fileID: 1864854304}
   - component: {fileID: 1864854303}
+  - component: {fileID: 1864854306}
   m_Layer: 5
   m_Name: Expand Btn
   m_TagString: Untagged
@@ -22486,6 +23107,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864854301}
   m_CullTransparentMesh: 1
+--- !u!114 &1864854306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864854301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1828624883
+      Data2: 1217707127
+      Data3: -832228176
+      Data4: 1880475271
+    Path: event:/SFXs/GenericClick
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1864931267
 GameObject:
   m_ObjectHideFlags: 0
@@ -22623,7 +23275,7 @@ MonoBehaviour:
     jogadores a carta lida."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -22761,7 +23413,7 @@ MonoBehaviour:
     pode mover 1 casa adicional imediatamente ap\xF3s pegar o item ou runa."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -22898,7 +23550,7 @@ MonoBehaviour:
   m_text: Cancelar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -23098,7 +23750,7 @@ GameObject:
   - component: {fileID: 1943403336}
   - component: {fileID: 1943403335}
   m_Layer: 5
-  m_Name: Escolher Bjorn
+  m_Name: Escolher Caotica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23143,10 +23795,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Escolher Default?
+  m_text: "Escolher Ca\xF3tica?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -23170,7 +23822,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 71.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -23597,6 +24249,7 @@ GameObject:
   - component: {fileID: 1995984059}
   - component: {fileID: 1995984058}
   - component: {fileID: 1995984057}
+  - component: {fileID: 1995984060}
   m_Layer: 5
   m_Name: Cancel Btn
   m_TagString: Untagged
@@ -23730,6 +24383,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1995984055}
   m_CullTransparentMesh: 1
+--- !u!114 &1995984060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995984055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1108291053
+      Data2: 1254805830
+      Data3: 1261688192
+      Data4: -224158554
+    Path: event:/SFXs/BackWooden
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2000195827
 GameObject:
   m_ObjectHideFlags: 0
@@ -24454,7 +25138,7 @@ MonoBehaviour:
   m_text: "Habilidade \u2014 Dilacerar"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
-  m_sharedMaterial: {fileID: -1795701081294833752, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
+  m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -25047,7 +25731,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Default
+          m_StringArgument: "Ca\xF3tica"
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1554595227}
@@ -25423,6 +26107,7 @@ GameObject:
   - component: {fileID: 2125345360}
   - component: {fileID: 2125345359}
   - component: {fileID: 2125345358}
+  - component: {fileID: 2125345361}
   m_Layer: 5
   m_Name: ContinueTogame Btn
   m_TagString: Untagged
@@ -25544,6 +26229,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125345356}
   m_CullTransparentMesh: 1
+--- !u!114 &2125345361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125345356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1175650661
+      Data2: 1082075904
+      Data3: -617790031
+      Data4: 1447548629
+    Path: event:/SFXs/Shield Hit Twice
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &2129613175
 GameObject:
   m_ObjectHideFlags: 0

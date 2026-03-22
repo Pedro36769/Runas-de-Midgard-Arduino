@@ -105,6 +105,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1091
+--- !u!114 &-7275994582326808617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Wind
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Ambient/Wind
+  Guid:
+    Data1: -478805248
+    Data2: 1111283151
+    Data3: -452703611
+    Data4: -1357266874
+  Banks:
+  - {fileID: 1593385495771005620}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11942
 --- !u!114 &-5865006583687356461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,13 +179,13 @@ MonoBehaviour:
     Data4: 1020788199
   Banks:
   - {fileID: 1593385495771005620}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2500
+  Length: 1949
 --- !u!114 &-4610873917182921517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,6 +306,60 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-2891669213373932345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFXs/ShieldHit
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFXs/ShieldHit
+  Guid:
+    Data1: 307896380
+    Data2: 1136009880
+    Data3: -1190389085
+    Data4: -1403918709
+  Banks:
+  - {fileID: 1593385495771005620}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 741
+--- !u!114 &-1278672411917033483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFXs/ArenaStart
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFXs/ArenaStart
+  Guid:
+    Data1: 1643679877
+    Data2: 1080010751
+    Data3: 1398601866
+    Data4: 943838976
+  Banks:
+  - {fileID: 1593385495771005620}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7361
 --- !u!114 &-1216304645940980666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,13 +490,17 @@ MonoBehaviour:
   - {fileID: 867499156086362186}
   - {fileID: -399058099910883945}
   - {fileID: 4760923236853542238}
+  - {fileID: -7275994582326808617}
+  - {fileID: 7245384993242475194}
+  - {fileID: -2891669213373932345}
+  - {fileID: -1278672411917033483}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1593385495771005620}
   StringsBanks:
   - {fileID: 2580205003124018359}
   cacheVersion: 131858
-  cacheTime: 639095085143856430
+  cacheTime: 639098000192683679
   SerializableEventsDict:
   - key: event:/SFXs/Ragnarok
     index: 0
@@ -447,6 +532,12 @@ MonoBehaviour:
     index: 13
   - key: event:/SFXs/HabilityUse
     index: 14
+  - key: event:/Ambient/Wind
+    index: 15
+  - key: event:/SFXs/BackWooden
+    index: 16
+  - key: event:/SFXs/ShieldHit
+    index: 17
 --- !u!114 &867499156086362186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,10 +582,10 @@ MonoBehaviour:
   Path: FMOD/Midgard/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639095085143856430
+  lastModified: 639098000192673647
   FileSizes:
   - Name: Desktop
-    Value: 14378368
+    Value: 13504256
   Exists: 1
 --- !u!114 &1759352468675033762
 MonoBehaviour:
@@ -562,10 +653,10 @@ MonoBehaviour:
   Path: FMOD/Midgard/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639095085143856430
+  lastModified: 639098000192683679
   FileSizes:
   - Name: Desktop
-    Value: 1948
+    Value: 2140
   Exists: 1
 --- !u!114 &3367754157965058791
 MonoBehaviour:
@@ -787,6 +878,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2500
+--- !u!114 &7245384993242475194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFXs/BackWooden
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFXs/BackWooden
+  Guid:
+    Data1: -1108291053
+    Data2: 1254805830
+    Data3: 1261688192
+    Data4: -224158554
+  Banks:
+  - {fileID: 1593385495771005620}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 55
 --- !u!114 &8933975580335065535
 MonoBehaviour:
   m_ObjectHideFlags: 0
