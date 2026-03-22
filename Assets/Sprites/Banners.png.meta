@@ -138,6 +138,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -216,7 +229,7 @@ TextureImporter:
         width: 2048
         height: 1024
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -225,6 +238,28 @@ TextureImporter:
       bones: []
       spriteID: 2fbcf713fd81a0940bce517229f8e786
       internalID: -1184020161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner_Sanguessuga
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1024
+        width: 2048
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7403d7faaac28ea4098746ce45ae4db0
+      internalID: -967530019
       vertices: []
       indices: 
       edges: []
@@ -249,6 +284,7 @@ TextureImporter:
       Banner_Carteiro: 8092928862833061227
       Banner_Eydis: 7364148634152971916
       Banner_Hrothgar: -1184020161
+      Banner_Sanguessuga: -967530019
       Banners_3: 1678014666
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

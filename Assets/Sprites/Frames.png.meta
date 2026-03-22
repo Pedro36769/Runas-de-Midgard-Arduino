@@ -181,10 +181,10 @@ TextureImporter:
       name: Hrothgar_Fg
       rect:
         serializedVersion: 2
-        x: 284
-        y: 3351
+        x: 274
+        y: 3335
         width: 664
-        height: 657
+        height: 664
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,9 +226,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 2204
+        y: 2015
         width: 1106
-        height: 863
+        height: 1106
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,9 +248,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 119
-        y: 1204
+        y: 957
         width: 969
-        height: 779
+        height: 969
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,9 +292,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 204
-        y: 156
+        y: 90
         width: 846
-        height: 820
+        height: 846
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

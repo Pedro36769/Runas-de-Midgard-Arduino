@@ -43,15 +43,8 @@ public class SetupManager : MonoBehaviour
     private void Awake()
     {
         //singleton
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
+        if (Instance != null && Instance != this) Destroy(this.gameObject);
+        else Instance = this; DontDestroyOnLoad(this.gameObject);
     }
 
     private void Start()
@@ -86,6 +79,7 @@ public class SetupManager : MonoBehaviour
         //procura na base de dados pelo nome recebido
         Character selectedData = GetCharacterByName(chosenCharName);
         if (selectedData == null) return; //se n achou faz o L
+        SetupSoundManager.Instance.PlaySFX("ShieldHit");
 
         if (player1Char == null) 
         {
