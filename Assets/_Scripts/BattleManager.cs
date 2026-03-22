@@ -14,7 +14,7 @@ public class BattleManager : MonoBehaviour
     [SerializeField] private GameObject battleCanvas;
     [SerializeField] private Image attackingPlayerImg;
     [SerializeField] private TMP_Text attackingPlayerText;
-    [SerializeField] private ParticleSystem battleParticle;
+    [SerializeField] private GameObject battleParticle;
     [SerializeField] private GameObject mainElements;
 
     [Header("Configuração de Alvos")]
@@ -49,8 +49,7 @@ public class BattleManager : MonoBehaviour
         mainElements.SetActive(true);
         battleCanvas.SetActive(false);
         confirmAttackObj.SetActive(false);
-        
-        battleParticle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+        battleParticle.SetActive(false);
 
         twoPlayers = SetupManager.Instance.twoPlayerMode;
         playersInCombat = twoPlayers ? 2 : 4;
@@ -76,8 +75,7 @@ public class BattleManager : MonoBehaviour
     {
         mainElements.SetActive(false);
         battleCanvas.SetActive(true);
-        battleParticle.Play();
-        SoundManager.Instance.PlaySFX("ArenaStart");
+        battleParticle.SetActive(true);
         StartCoroutine(BattleRoutine());
     }
 
@@ -166,7 +164,7 @@ public class BattleManager : MonoBehaviour
         }
 
         battleCanvas.SetActive(false);
-        battleParticle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+        battleParticle.SetActive(false);
         mainElements.SetActive(true);
         Debug.Log("Combate resolvido e UI atualizada.");
     }
