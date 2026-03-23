@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{2034599b-c25c-40da-b4ee-17f671361577}">
+		<property name="name">
+			<value>bassGroove</value>
+		</property>
+		<relationship name="folder">
+			<destination>{31b446b5-1572-421c-be97-5280253ef6e2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{36ebf44d-1d26-477a-bb0b-377c4b700ed8}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{36ebf44d-1d26-477a-bb0b-377c4b700ed8}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

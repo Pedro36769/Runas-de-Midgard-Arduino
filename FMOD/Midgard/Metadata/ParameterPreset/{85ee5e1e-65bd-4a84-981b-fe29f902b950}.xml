@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{85ee5e1e-65bd-4a84-981b-fe29f902b950}">
+		<property name="name">
+			<value>driveGuitar</value>
+		</property>
+		<relationship name="folder">
+			<destination>{31b446b5-1572-421c-be97-5280253ef6e2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{0e047341-cd6f-4294-a7a7-a4dc114df35d}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{0e047341-cd6f-4294-a7a7-a4dc114df35d}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{2a1a3911-bc64-4f95-94ab-c9da38016ce1}">
+		<property name="name">
+			<value>grandfatherPads</value>
+		</property>
+		<relationship name="folder">
+			<destination>{31b446b5-1572-421c-be97-5280253ef6e2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{83d1c7ee-5f06-4fd6-9122-aeaf39dc9a8a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{83d1c7ee-5f06-4fd6-9122-aeaf39dc9a8a}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

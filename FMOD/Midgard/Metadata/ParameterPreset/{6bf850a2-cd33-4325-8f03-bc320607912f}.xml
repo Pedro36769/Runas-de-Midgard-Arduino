@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{6bf850a2-cd33-4325-8f03-bc320607912f}">
+		<property name="name">
+			<value>icePads</value>
+		</property>
+		<relationship name="folder">
+			<destination>{31b446b5-1572-421c-be97-5280253ef6e2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{bbe10d36-0018-499b-b876-f0f1d7e2e24e}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{bbe10d36-0018-499b-b876-f0f1d7e2e24e}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

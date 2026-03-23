@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{1eabb9e3-e782-46e3-bd91-5c3b31b3a2eb}">
+		<property name="assetPath">
+			<value>Cymatics - Wet Percussion (Cold).wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.9492499999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ec8a8beb-6b3a-4434-963c-d3bcd2185a89}</destination>
+		</relationship>
+	</object>
+</objects>

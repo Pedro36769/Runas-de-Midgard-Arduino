@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{cbae6425-92df-4d04-a194-744af5d79f0f}">
+		<property name="name">
+			<value>mandolin</value>
+		</property>
+		<relationship name="folder">
+			<destination>{31b446b5-1572-421c-be97-5280253ef6e2}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{81623553-5411-4bb1-b041-e608a7e41919}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{81623553-5411-4bb1-b041-e608a7e41919}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
