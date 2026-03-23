@@ -249,8 +249,8 @@ TextureImporter:
       name: Icons_Blizzard
       rect:
         serializedVersion: 2
-        x: 634
-        y: 1480
+        x: 661
+        y: 1474
         width: 581
         height: 581
       alignment: 0
@@ -272,7 +272,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 684
-        y: 889
+        y: 854
         width: 540
         height: 540
       alignment: 0
@@ -333,6 +333,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Btn_Small_0
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 1503
+        width: 516
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035bc61b6964f624cb3d2315128172cd
+      internalID: -1948259893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Btn_Small_1
+      rect:
+        serializedVersion: 2
+        x: 1997
+        y: 1503
+        width: 516
+        height: 499
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9991d21bdcdc4c443888e2fb0eb2e2a3
+      internalID: -1262672625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -349,6 +393,8 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":2,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
+      Btn_Small_0: -1948259893
+      Btn_Small_1: -1262672625
       Icon_Config: -2111082737
       Icon_Heart: -210189480
       Icon_Manual: 1457108324
