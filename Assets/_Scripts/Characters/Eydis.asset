@@ -18,6 +18,7 @@ MonoBehaviour:
   portraitBg: {fileID: 8674755150191113282, guid: 31537141433c5cd478f48081c74de063, type: 3}
   characterImage: {fileID: 21300000, guid: 51302c97af5d6b44584d8915cf5adaf8, type: 3}
   characterBanner: {fileID: 7364148634152971916, guid: 0068e97a5d778c044a88a723dca34f8c, type: 3}
+  characterCard: {fileID: 6428616649371433020, guid: 5898c6bdcd060814e8e8a7fa4b3b1264, type: 3}
   health: 18
   damage: 3
   defense: 2

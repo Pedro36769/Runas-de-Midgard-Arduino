@@ -9,6 +9,7 @@ public class Character : ScriptableObject
     public Sprite portraitBg;
     public Sprite characterImage;
     public Sprite characterBanner;
+    public Sprite characterCard;
     public int health;
     public int damage;
     public int defense;

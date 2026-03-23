@@ -158,7 +158,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 3196
+  Length: 1800
 --- !u!114 &-4695378076749612527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,7 +489,6 @@ MonoBehaviour:
   - {fileID: 8933975580335065535}
   - {fileID: 867499156086362186}
   - {fileID: -399058099910883945}
-  - {fileID: 4760923236853542238}
   - {fileID: -7275994582326808617}
   - {fileID: 7245384993242475194}
   - {fileID: -2891669213373932345}
@@ -500,7 +499,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 2580205003124018359}
   cacheVersion: 131858
-  cacheTime: 639098000192683679
+  cacheTime: 639098529994384103
   SerializableEventsDict:
   - key: event:/SFXs/Ragnarok
     index: 0
@@ -530,13 +529,13 @@ MonoBehaviour:
     index: 12
   - key: event:/SFXs/GenericClick
     index: 13
-  - key: event:/SFXs/HabilityUse
-    index: 14
   - key: event:/Ambient/Wind
-    index: 15
+    index: 14
   - key: event:/SFXs/BackWooden
-    index: 16
+    index: 15
   - key: event:/SFXs/ShieldHit
+    index: 16
+  - key: event:/SFXs/ArenaStart
     index: 17
 --- !u!114 &867499156086362186
 MonoBehaviour:
@@ -582,10 +581,10 @@ MonoBehaviour:
   Path: FMOD/Midgard/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639098000192673647
+  lastModified: 639098529994384103
   FileSizes:
   - Name: Desktop
-    Value: 13504256
+    Value: 13503968
   Exists: 1
 --- !u!114 &1759352468675033762
 MonoBehaviour:
@@ -653,10 +652,10 @@ MonoBehaviour:
   Path: FMOD/Midgard/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639098000192683679
+  lastModified: 639098529994384103
   FileSizes:
   - Name: Desktop
-    Value: 2140
+    Value: 2088
   Exists: 1
 --- !u!114 &3367754157965058791
 MonoBehaviour:
@@ -709,33 +708,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &4760923236853542238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFXs/HabilityUse
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFXs/HabilityUse
-  Guid:
-    Data1: -1468226212
-    Data2: 1277204033
-    Data3: -2091948100
-    Data4: 1239722682
-  Banks:
-  - {fileID: 1593385495771005620}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &5824138552945644773
 MonoBehaviour:
   m_ObjectHideFlags: 0

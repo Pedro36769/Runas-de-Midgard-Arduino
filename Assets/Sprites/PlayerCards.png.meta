@@ -1,13 +1,22 @@
 fileFormatVersion: 2
-guid: 0068e97a5d778c044a88a723dca34f8c
+guid: 5898c6bdcd060814e8e8a7fa4b3b1264
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8092928862833061227
-    second: Banners_0
+      213: -5917098985354326157
+    second: PlayerCards_0
   - first:
-      213: 7364148634152971916
-    second: Banners_1
+      213: 6428616649371433020
+    second: PlayerCards_1
+  - first:
+      213: -8407227409705285989
+    second: PlayerCards_2
+  - first:
+      213: 6839169955827693322
+    second: PlayerCards_3
+  - first:
+      213: 5489697662397856335
+    second: PlayerCards_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +84,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -138,30 +147,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 1024
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Banner_Carteiro
+      name: Bjorn_Card
       rect:
         serializedVersion: 2
-        x: 0
-        y: 3072
-        width: 2048
-        height: 1000
+        x: 17
+        y: 1464
+        width: 392
+        height: 565
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b6dabad2cebdf4070800000000000000
-      internalID: 8092928862833061227
+      spriteID: 37f812da2dd32eda0800000000000000
+      internalID: -5917098985354326157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Banner_Eydis
+      name: Eydis_Card
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 3072
-        width: 2048
-        height: 1000
+        x: 559
+        y: 1464
+        width: 392
+        height: 565
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,74 +188,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c8eadd37a26b23660800000000000000
-      internalID: 7364148634152971916
+      spriteID: c3832f648c8073950800000000000000
+      internalID: 6428616649371433020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Banner_Bjorn
+      name: Eirik_Card
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2048
-        width: 2048
-        height: 1000
+        x: 1101
+        y: 1464
+        width: 392
+        height: 565
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 085476e4f8b3ab64190d6fa2bd78f934
-      internalID: -1583621263
+      spriteID: b96c69ad637835b80800000000000000
+      internalID: -8407227409705285989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Banner_Hrothgar
+      name: Hrothgar_Card
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 2048
-        width: 2048
-        height: 1000
+        x: 17
+        y: 852
+        width: 392
+        height: 565
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2fbcf713fd81a0940bce517229f8e786
-      internalID: -1184020161
+      spriteID: a0732afd6dc99ee50800000000000000
+      internalID: 6839169955827693322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Banner_Asta
+      name: Asta_Card
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 1024
-        width: 2048
-        height: 1000
+        x: 559
+        y: 852
+        width: 392
+        height: 565
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7403d7faaac28ea4098746ce45ae4db0
-      internalID: -967530019
+      spriteID: f4a348330f25f2c40800000000000000
+      internalID: 5489697662397856335
       vertices: []
       indices: 
       edges: []
@@ -268,7 +264,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8d88ec3ab841d1044b0238de14e9a0cf
+    spriteID: 9a6b6a3624868ed4398b66fdeffa9844
     internalID: 0
     vertices: []
     indices: 
@@ -276,16 +272,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":2048.0,"y":1024.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Banner_Asta: -967530019
-      Banner_Bjorn: -1583621263
-      Banner_Carteiro: 8092928862833061227
-      Banner_Eydis: 7364148634152971916
-      Banner_Hrothgar: -1184020161
-      Banners_3: 1678014666
+      Asta_Card: 5489697662397856335
+      Bjorn_Card: -5917098985354326157
+      Eirik_Card: -8407227409705285989
+      Eydis_Card: 6428616649371433020
+      Hrothgar_Card: 6839169955827693322
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

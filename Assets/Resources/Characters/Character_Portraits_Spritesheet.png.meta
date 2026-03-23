@@ -200,9 +200,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2000
-        width: 2000
-        height: 2000
+        y: 2024
+        width: 1976
+        height: 1976
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,13 +262,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanguessuga_pfp
+      name: Asta_pfp
       rect:
         serializedVersion: 2
-        x: 2000
-        y: 0
-        width: 2000
-        height: 2000
+        x: 2162
+        y: 277
+        width: 1700
+        height: 1700
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,12 +299,12 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":2000.0,"y":2000.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
+      Asta_pfp: 2050889645
       Bjorn_pfp: -696387706
       Carteiro_pfp: 1390216330
       Character_Portraits_Spritesheet_4: -646902602
       Eydis_pfp: 1449826127
       Placeholder_pfp: 706338885
-      Sanguessuga_pfp: 2050889645
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

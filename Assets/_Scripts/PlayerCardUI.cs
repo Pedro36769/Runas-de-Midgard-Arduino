@@ -8,6 +8,7 @@ public class PlayerCardUI : MonoBehaviour
     public Image portraitFgImg;
     public Image portraitBgImg;
     public Image bannerImage;
+    [SerializeField] private Image cardImage;
     [SerializeField] private TMP_Text nameText;
     public string cardName;
     [SerializeField] private bool setupOnStart;
@@ -36,6 +37,7 @@ public class PlayerCardUI : MonoBehaviour
         portraitFgImg.sprite = characterData.portraitFg;
         portraitBgImg.sprite = characterData.portraitBg;
         if(bannerImage!=null) bannerImage.sprite = characterData.characterBanner;
+        if(cardImage!=null) cardImage.sprite = characterData.characterCard;
 
         //textos
         cardName = characterData.playerName;

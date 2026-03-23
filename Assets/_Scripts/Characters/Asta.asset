@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41cd79b7ccdcfd244bc08f07a5d51a11, type: 3}
-  m_Name: Sanguessuga
+  m_Name: Asta
   m_EditorClassIdentifier: Assembly-CSharp::Character
-  playerName: Sanguessuga
+  playerName: Asta
   characterPortrait: {fileID: 2050889645, guid: 7154cb21a06ae1941bb0be170ae54ba6, type: 3}
-  portraitFg: {fileID: 3621396494643708516, guid: 31537141433c5cd478f48081c74de063, type: 3}
-  portraitBg: {fileID: -6407714468422981231, guid: 31537141433c5cd478f48081c74de063, type: 3}
+  portraitFg: {fileID: -1017157587, guid: 31537141433c5cd478f48081c74de063, type: 3}
+  portraitBg: {fileID: 2024198713, guid: 31537141433c5cd478f48081c74de063, type: 3}
   characterImage: {fileID: 21300000, guid: 8db79410810fed745a2a02d7bbe02793, type: 3}
   characterBanner: {fileID: -967530019, guid: 0068e97a5d778c044a88a723dca34f8c, type: 3}
+  characterCard: {fileID: 5489697662397856335, guid: 5898c6bdcd060814e8e8a7fa4b3b1264, type: 3}
   health: 15
   damage: 3
   defense: 3
