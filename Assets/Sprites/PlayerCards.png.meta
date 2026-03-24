@@ -317,6 +317,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Wood_Card
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 841
+        width: 394
+        height: 564
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a9f00e0b63928e48bbe6b95b3b45e01
+      internalID: -1686845944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -340,6 +362,7 @@ TextureImporter:
       Hrothgar_Card: 6839169955827693322
       Lock: 889663330
       Locked_Card: -1075740130
+      Wood_Card: -1686845944
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

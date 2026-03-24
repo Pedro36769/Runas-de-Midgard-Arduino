@@ -38,7 +38,7 @@ public class PlayerCardUI : MonoBehaviour
         //imagens
         portraitImage.sprite = characterData.characterPortrait;
         portraitFgImg.sprite = characterData.portraitFg;
-        portraitBgImg.sprite = characterData.portraitBg;
+        if(portraitBgImg!=null) portraitBgImg.sprite = characterData.portraitBg;
         if(bannerImage!=null) bannerImage.sprite = characterData.characterBanner;
         if(cardImage!=null) cardImage.sprite = characterData.characterCard;
 
@@ -89,8 +89,9 @@ public class PlayerCardUI : MonoBehaviour
     {
         lockObj.SetActive(true); 
         if(cardImage!=null) cardImage.sprite = lockedSprite;
-        portraitFgImg.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
-        portraitBgImg.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
+        portraitFgImg.color = new Vector4(0.4f, 0.4f, 0.4f, 1);
+        if(portraitBgImg!=null) portraitBgImg.color = new Vector4(0.4f, 0.4f, 0.4f, 1);
+        portraitImage.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
         nameText.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
         defText.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
         dmgText.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
@@ -102,7 +103,8 @@ public class PlayerCardUI : MonoBehaviour
         lockObj.SetActive(false); 
         if(cardImage!=null) cardImage.sprite = characterData.characterCard;
         portraitFgImg.color = new Vector4(1, 1, 1, 1);
-        portraitBgImg.color = new Vector4(1, 1, 1, 1);
+        if(portraitBgImg!=null) portraitBgImg.color = new Vector4(1, 1, 1, 1);
+        portraitImage.color = new Vector4(1, 1, 1, 1);
         nameText.color = new Vector4(1, 1, 1, 1);
         defText.color = new Vector4(1, 1, 1, 1);
         dmgText.color = new Vector4(1, 1, 1, 1);

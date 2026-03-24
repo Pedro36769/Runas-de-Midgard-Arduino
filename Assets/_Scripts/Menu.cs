@@ -7,9 +7,4 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("TelaSetup", LoadSceneMode.Single);
     }
-
-    public void LoadDebugTest()
-    {
-        SceneManager.LoadScene("DebugTest", LoadSceneMode.Single);    
-    }
 }
