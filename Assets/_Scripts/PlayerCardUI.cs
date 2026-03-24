@@ -9,6 +9,8 @@ public class PlayerCardUI : MonoBehaviour
     public Image portraitBgImg;
     public Image bannerImage;
     [SerializeField] private Image cardImage;
+    [SerializeField] private Sprite lockedSprite;
+    [SerializeField] private GameObject lockObj;
     [SerializeField] private TMP_Text nameText;
     public string cardName;
     [SerializeField] private bool setupOnStart;
@@ -26,6 +28,7 @@ public class PlayerCardUI : MonoBehaviour
     private void Start()
     {
         if(setupOnStart && characterData!=null) SetupCard(characterData);
+        if(lockObj!=null) lockObj.SetActive(false);
     }
 
     public void SetupCard(Character characterData)
@@ -81,5 +84,28 @@ public class PlayerCardUI : MonoBehaviour
     public void DestroyCard()
     {
         Destroy(this.gameObject);
+    }
+    public void LockCard()
+    {
+        lockObj.SetActive(true); 
+        if(cardImage!=null) cardImage.sprite = lockedSprite;
+        portraitFgImg.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
+        portraitBgImg.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
+        nameText.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
+        defText.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
+        dmgText.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
+        hpText.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
+    }
+
+    public void UnlockCard()
+    {
+        lockObj.SetActive(false); 
+        if(cardImage!=null) cardImage.sprite = characterData.characterCard;
+        portraitFgImg.color = new Vector4(1, 1, 1, 1);
+        portraitBgImg.color = new Vector4(1, 1, 1, 1);
+        nameText.color = new Vector4(1, 1, 1, 1);
+        defText.color = new Vector4(1, 1, 1, 1);
+        dmgText.color = new Vector4(1, 1, 1, 1);
+        hpText.color = new Vector4(1, 1, 1, 1);
     }
 }

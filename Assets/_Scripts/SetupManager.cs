@@ -148,6 +148,7 @@ public class SetupManager : MonoBehaviour
         twoPlayerMode = false;
         characterSelectScreen.SetActive(false);
         playerNumberScreen.SetActive(true);
+        playerNumberText.text = "";
         ResetChosenChars();
     }
 
