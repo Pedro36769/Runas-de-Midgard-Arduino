@@ -1068,6 +1068,9 @@ MonoBehaviour:
   portraitFgImg: {fileID: 1104625766}
   portraitBgImg: {fileID: 1916372927}
   bannerImage: {fileID: 1577367845}
+  cardImage: {fileID: 0}
+  lockedSprite: {fileID: 0}
+  lockObj: {fileID: 0}
   nameText: {fileID: 546865465}
   cardName: 
   setupOnStart: 0
@@ -7057,6 +7060,9 @@ MonoBehaviour:
   portraitFgImg: {fileID: 2090811617}
   portraitBgImg: {fileID: 1881693505}
   bannerImage: {fileID: 58380492}
+  cardImage: {fileID: 0}
+  lockedSprite: {fileID: 0}
+  lockObj: {fileID: 0}
   nameText: {fileID: 904800606}
   cardName: 
   setupOnStart: 0
@@ -8741,6 +8747,9 @@ MonoBehaviour:
   portraitFgImg: {fileID: 830315824}
   portraitBgImg: {fileID: 582872111}
   bannerImage: {fileID: 423762405}
+  cardImage: {fileID: 0}
+  lockedSprite: {fileID: 0}
+  lockObj: {fileID: 0}
   nameText: {fileID: 1640258047}
   cardName: 
   setupOnStart: 0
@@ -9962,7 +9971,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 08e16c4203391d94eae05c2743efb836, type: 2}
+  - {fileID: 2100000, guid: 93286f1429458f04ab050199f93b153c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16391,6 +16400,9 @@ MonoBehaviour:
   portraitFgImg: {fileID: 578643405}
   portraitBgImg: {fileID: 685016480}
   bannerImage: {fileID: 377751707}
+  cardImage: {fileID: 0}
+  lockedSprite: {fileID: 0}
+  lockObj: {fileID: 0}
   nameText: {fileID: 487593736}
   cardName: 
   setupOnStart: 0
