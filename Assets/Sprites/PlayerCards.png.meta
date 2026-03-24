@@ -339,6 +339,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Loc
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 371
+        width: 184
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62aaa611648872349bc86d840fe30009
+      internalID: 1452474637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -360,6 +382,7 @@ TextureImporter:
       Eirik_Card: -8407227409705285989
       Eydis_Card: 6428616649371433020
       Hrothgar_Card: 6839169955827693322
+      Loc: 1452474637
       Lock: 889663330
       Locked_Card: -1075740130
       Wood_Card: -1686845944
