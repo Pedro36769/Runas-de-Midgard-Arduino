@@ -159,10 +159,7 @@ public class BattleManager : MonoBehaviour
             PlayerCardUI attacker = combatPair.Key;
             PlayerCardUI target = combatPair.Value;
 
-            int finalDamage = Mathf.Max(0, attacker.currentDmg - target.currentDef);
-
-            target.TakeDamage(finalDamage);
-            target.ChangeHealth(target.currentHp.ToString());
+            target.TakeDamage(attacker.currentDmg);
         }
 
         battleCanvas.SetActive(false);

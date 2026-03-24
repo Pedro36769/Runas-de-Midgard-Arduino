@@ -74,12 +74,39 @@ public class PlayerCardUI : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int takenDmg)
+    public void TakeDamage(int incomingDamage)
     {
         int previousHp = currentHp;
-        currentHp = currentHp - takenDmg;
-        Debug.Log("Player " + cardName + " tomou " + takenDmg + " de dano.");
+        int previousDef = currentDef;
+
+        if (currentDef > 0) // se tiver defesa
+        {
+            if (incomingDamage >= currentDef) 
+            {
+                // se o dano ultrapassar a defesa, desconta no hp
+                int excessDamage = incomingDamage - currentDef;
+                currentDef = 0;
+                currentHp -= excessDamage;
+            }
+            else 
+            {
+                // a defesa é suficiente para absorver todo o dano
+                currentDef -= incomingDamage;
+            }
+            Debug.Log("Defesa anterior: " + previousDef + ". Defesa atual: " + currentDef);
+        }
+        else // senão, reduz o HP diretamente
+        {
+            currentHp -= incomingDamage;
+        }
+
+        // garante q o hp n fique negativo
+        currentHp = Mathf.Max(0, currentHp);
+        
         Debug.Log("Vida anterior: " + previousHp + ". Vida atual: " + currentHp);
+        Debug.Log("Player " + cardName + " sofreu um ataque de " + incomingDamage + " de poder.");
+
+        ChangeHealth(currentHp.ToString());
     }
     public void DestroyCard()
     {

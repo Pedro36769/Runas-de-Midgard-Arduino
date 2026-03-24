@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{c27f2d2f-764a-40a5-bb1b-43f3f92552e7}">
+		<property name="assetPath">
+			<value>Drum Battle Start.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.4285714285714284</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ec8a8beb-6b3a-4434-963c-d3bcd2185a89}</destination>
+		</relationship>
+	</object>
+</objects>

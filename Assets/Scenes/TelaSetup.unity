@@ -3384,10 +3384,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Essa habilidade pode ser usada apenas 1 vez por partida e somente no seu
-    turno.
-
-'
+  m_text: "Essa habilidade <i>n\xE3o pode ser usada duas vezes seguidas no mesmo
+    jogador.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
@@ -7692,7 +7690,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Bjorn pode puxar um jogador que esteja a at\xE9 <b>2 casas</b> de dist\xE2ncia
-    para a mesma casa que ele, for\xE7ando um combate imediato."
+    para a mesma casa que ele, for\xE7ando um <i>combate imediato</i>."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
   m_sharedMaterial: {fileID: -3414100253589207682, guid: da6f9786e92c3ec439e363892695b9b0, type: 2}
@@ -17210,7 +17208,7 @@ MonoBehaviour:
   allAvailableCharacters:
   - {fileID: 11400000, guid: ae2507b8cf7a45944a2a7d6d89a5b97b, type: 2}
   - {fileID: 11400000, guid: 85b0f85aa286d1d44abd23d37a8f75dd, type: 2}
-  - {fileID: 11400000, guid: 4ddf3b7d943ef40438ee2952857d934c, type: 2}
+  - {fileID: 11400000, guid: 2a6718d42856af840ade6b91a2dc92e2, type: 2}
   - {fileID: 11400000, guid: 0620a1abdcc3b1346ab3de3edb4a2552, type: 2}
   - {fileID: 11400000, guid: 7f5505579ec6d114a862a84c472bf147, type: 2}
   - {fileID: 11400000, guid: fd6470edf2dfe1b45af489753ad31b98, type: 2}
@@ -21882,7 +21880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1634266067
 RectTransform:
   m_ObjectHideFlags: 0
