@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: Hrothgar
   m_EditorClassIdentifier: Assembly-CSharp::Character
   playerName: Hrothgar
+  abilityTitle: <b>Dilacerar</b>
+  abilityDesc: "Hrothgar pode <b>Dilacerar</b> 3x por jogo, o jogador deve declarar
+    que vai usar essa habilidade antes de um combate iniciar, ap\xF3s isso, qualquer
+    jogador que receber dano na mesma rodada que dilacerar estiver ativo fica incapaz
+    de se curar por 2 rodadas."
+  abilityDesc2: "Passiva: Colecionador de cr\xE2nios Sempre que voc\xEA matar um
+    jogador, ganha <i>1 Trof\xE9u de Ca\xE7a</i>.   Cada trof\xE9u concede +1 de
+    Ataque ou + 2 de Vida."
   characterPortrait: {fileID: -646902602, guid: 7154cb21a06ae1941bb0be170ae54ba6, type: 3}
   portraitFg: {fileID: 533177413809491475, guid: 31537141433c5cd478f48081c74de063, type: 3}
   portraitBg: {fileID: -6407714468422981231, guid: 31537141433c5cd478f48081c74de063, type: 3}

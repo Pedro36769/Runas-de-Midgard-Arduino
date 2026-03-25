@@ -14,15 +14,22 @@ public class PlayerCardUI : MonoBehaviour
     [SerializeField] private TMP_Text nameText;
     public string cardName;
     [SerializeField] private bool setupOnStart;
-    [SerializeField] private Character characterData;
+    public Character characterData;
+    [SerializeField] private PlayerPopUp popUp;
 
-    [Header("Valores")]
+    [Header("Vida")]
     [SerializeField] private TMP_Text hpText;
     [SerializeField] private TMP_InputField inputHp;
     public int currentHp;
+
+    [Header("Dano")]
     [SerializeField] private TMP_Text dmgText;
+    [SerializeField] private TMP_InputField inputDmg;
     public int currentDmg;
+
+    [Header("Defesa")]
     [SerializeField] private TMP_Text defText;
+    [SerializeField] private TMP_InputField inputDef;
     public int currentDef;
 
     private void Start()
@@ -52,9 +59,13 @@ public class PlayerCardUI : MonoBehaviour
 
         currentDmg = characterData.damage;
         if(dmgText!=null) dmgText.text = currentDmg.ToString();
+        if(inputDmg!=null) inputDmg.text = currentDmg.ToString();
 
         currentDef = characterData.defense;
         if(defText!=null) defText.text = currentDef.ToString();
+        if(inputDef!=null) inputDef.text = currentDef.ToString();
+
+        if(popUp!=null) popUp.SetupPopUp(characterData);
     }
 
     public void ChangeHealth(string inputtedHp)
@@ -71,6 +82,38 @@ public class PlayerCardUI : MonoBehaviour
         {
             inputHp.text = currentHp.ToString(); 
             Debug.LogWarning("Input inválido ou fora do limite (0-99)! Valor resetado para: " + currentHp);
+        }
+    }
+
+    public void ChangeDamage(string inputtedDmg)
+    {
+        string cleanInput = inputtedDmg.Trim((char)8203, ' ');
+
+        if (int.TryParse(cleanInput, out int newDmg) && newDmg >= 0 && newDmg <= 25)
+        {
+            currentDmg = newDmg;
+            inputDmg.text = newDmg.ToString();
+        }
+        else
+        {
+            inputDmg.text = currentDmg.ToString(); 
+            Debug.LogWarning("Input inválido ou fora do limite (0-25)! Valor resetado para: " + currentDmg);
+        }
+    }
+
+    public void ChangeDefense(string inputtedDef)
+    {
+        string cleanInput = inputtedDef.Trim((char)8203, ' ');
+
+        if (int.TryParse(cleanInput, out int newDef) && newDef >= 0 && newDef <= 25)
+        {
+            currentDef = newDef;
+            inputDef.text = newDef.ToString();
+        }
+        else
+        {
+            inputDef.text = currentDef.ToString(); 
+            Debug.LogWarning("Input inválido ou fora do limite (0-25)! Valor resetado para: " + currentDef);
         }
     }
 

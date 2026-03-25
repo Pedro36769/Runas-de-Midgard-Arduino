@@ -247,7 +247,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2048
-        y: 1024
+        y: 1000
         width: 2048
         height: 1000
       alignment: 0
@@ -260,6 +260,28 @@ TextureImporter:
       bones: []
       spriteID: 7403d7faaac28ea4098746ce45ae4db0
       internalID: -967530019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Banner_Clara
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 2048
+        height: 1000
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef7af356c5fcea469b428a880b3f8f1
+      internalID: 1837067075
       vertices: []
       indices: 
       edges: []
@@ -283,6 +305,7 @@ TextureImporter:
       Banner_Asta: -967530019
       Banner_Bjorn: -1583621263
       Banner_Carteiro: 8092928862833061227
+      Banner_Clara: 1837067075
       Banner_Eydis: 7364148634152971916
       Banner_Hrothgar: -1184020161
       Banners_3: 1678014666

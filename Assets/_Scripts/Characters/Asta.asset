@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Asta
   m_EditorClassIdentifier: Assembly-CSharp::Character
   playerName: Asta
+  abilityTitle: "<b>T\xEDtulo da Habilidade</b>"
+  abilityDesc: "Descri\xE7\xE3o da habilidade"
+  abilityDesc2: "Descri\xE7\xE3o da habilidade 2"
   characterPortrait: {fileID: 2050889645, guid: 7154cb21a06ae1941bb0be170ae54ba6, type: 3}
   portraitFg: {fileID: -1017157587, guid: 31537141433c5cd478f48081c74de063, type: 3}
   portraitBg: {fileID: 2024198713, guid: 31537141433c5cd478f48081c74de063, type: 3}

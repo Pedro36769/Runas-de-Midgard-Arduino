@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: Eirik
   m_EditorClassIdentifier: Assembly-CSharp::Character
   playerName: Eirik
+  abilityTitle: <b>Saqueador Veloz</b>
+  abilityDesc: "Quando este personagem cair em uma casa de runa ou consum\xEDvel,
+    ele pode <b>mover 1 casa adicional</b> imediatamente ap\xF3s pegar o item ou
+    runa."
+  abilityDesc2: "Passiva: Bolsa sem fundo <b>Limite de runas e consum\xEDveis aumenta
+    em 2.</b>"
   characterPortrait: {fileID: 1390216330, guid: 7154cb21a06ae1941bb0be170ae54ba6, type: 3}
   portraitFg: {fileID: 3621396494643708516, guid: 31537141433c5cd478f48081c74de063, type: 3}
   portraitBg: {fileID: 5235077582248952677, guid: 31537141433c5cd478f48081c74de063, type: 3}
