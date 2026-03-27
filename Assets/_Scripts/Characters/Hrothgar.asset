@@ -14,17 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Character
   playerName: Hrothgar
   abilityTitle: <b>Dilacerar</b>
-  abilityDesc: "Hrothgar pode <b>Dilacerar</b> 3x por jogo, o jogador deve declarar
-    que vai usar essa habilidade antes de um combate iniciar, ap\xF3s isso, qualquer
-    jogador que receber dano na mesma rodada que dilacerar estiver ativo fica incapaz
-    de se curar por 2 rodadas."
-  abilityDesc2: "Passiva: Colecionador de cr\xE2nios Sempre que voc\xEA matar um
-    jogador, ganha <i>1 Trof\xE9u de Ca\xE7a</i>.   Cada trof\xE9u concede +1 de
-    Ataque ou + 2 de Vida."
+  abilityDesc: "Hrothgar pode <b>Dilacerar</b> 3x por jogo, voc\xEA deve declarar
+    que vai usar essa habilidade antes de um combate. Qualquer jogador que receber
+    dano de Hrothgar fica incapaz de se curar por <b>2 rodadas</b>."
+  abilityDesc2: "Passiva: Colecionador de cr\xE2nios Sempre que matar um jogador,
+    <color=#FFD900>+1 de Ataque</color> ou <color=#FF1111>+2 de Vida</color>."
   characterPortrait: {fileID: -646902602, guid: 7154cb21a06ae1941bb0be170ae54ba6, type: 3}
   portraitFg: {fileID: 533177413809491475, guid: 31537141433c5cd478f48081c74de063, type: 3}
   portraitBg: {fileID: -6407714468422981231, guid: 31537141433c5cd478f48081c74de063, type: 3}
-  characterImage: {fileID: 21300000, guid: ae93359de96f1554dbc0cd18b77a8973, type: 3}
+  characterImage: {fileID: -646902602, guid: 7154cb21a06ae1941bb0be170ae54ba6, type: 3}
   characterBanner: {fileID: -1184020161, guid: 0068e97a5d778c044a88a723dca34f8c, type: 3}
   characterCard: {fileID: 6839169955827693322, guid: 5898c6bdcd060814e8e8a7fa4b3b1264, type: 3}
   health: 19

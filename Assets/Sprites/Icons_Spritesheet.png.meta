@@ -377,6 +377,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Icon_Edit
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 812
+        width: 533
+        height: 571
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e4a50c0a5af4940b2e61add8f4a717
+      internalID: -1830999261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -396,6 +418,7 @@ TextureImporter:
       Btn_Small_0: -1948259893
       Btn_Small_1: -1262672625
       Icon_Config: -2111082737
+      Icon_Edit: -1830999261
       Icon_Heart: -210189480
       Icon_Manual: 1457108324
       Icon_Shield: -179374305
@@ -403,6 +426,7 @@ TextureImporter:
       Icon_Wolf_Eyes: 476967768
       Icon_Wolf_Head: -2108332297
       Icons_Blizzard: 463655981
+      Icons_Spritesheet_0: -1630354057
       Icons_Spritesheet_4: -1777967637
       Icons_Tides: 1246008248
   mipmapLimitGroupName: 

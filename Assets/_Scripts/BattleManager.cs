@@ -160,5 +160,6 @@ public class BattleManager : MonoBehaviour
         battleCanvas.SetActive(false);
         battleParticle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
         Debug.Log("Combate resolvido e UI atualizada.");
+        //avançar mais uma rodada
     }
 }
