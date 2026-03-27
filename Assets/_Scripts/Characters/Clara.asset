@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41cd79b7ccdcfd244bc08f07a5d51a11, type: 3}
+  m_Name: Clara
+  m_EditorClassIdentifier: Assembly-CSharp::Character
+  playerName: Clara
+  abilityTitle: "<b>T\xEDtulo da Habilidade</b>"
+  abilityDesc: "Descri\xE7\xE3o da habilidade"
+  abilityDesc2: "Descri\xE7\xE3o da habilidade 2"
+  characterPortrait: {fileID: 706338885, guid: 7154cb21a06ae1941bb0be170ae54ba6, type: 3}
+  portraitFg: {fileID: -2019196691, guid: 31537141433c5cd478f48081c74de063, type: 3}
+  portraitBg: {fileID: -108423580, guid: 31537141433c5cd478f48081c74de063, type: 3}
+  characterImage: {fileID: 706338885, guid: 7154cb21a06ae1941bb0be170ae54ba6, type: 3}
+  characterBanner: {fileID: 1837067075, guid: 0068e97a5d778c044a88a723dca34f8c, type: 3}
+  characterCard: {fileID: 331476910, guid: 5898c6bdcd060814e8e8a7fa4b3b1264, type: 3}
+  health: 17
+  damage: 3
+  defense: 1

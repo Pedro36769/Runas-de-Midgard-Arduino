@@ -122,17 +122,18 @@ public class GameManager : MonoBehaviour
             SoundManager.Instance.SongControl("battle");
             inBattle = true;
             BattleManager.Instance.BattleLogic();
-
-            if (!eventActive && (currentRound - lastEventEndRound) > eventCooldown) //se não tem nenhum evento ativo && o último evento aconteceu a mais de X rodadas
-            {
-                ChooseGlobalEvent();
-            }
         }
         else
         {
             ClearUITexts();
             roundCounter.color = Color.white;
             inBattle = false;
+
+            //só escolhe evento se não for rodada múltipla de 3, e se tiver passado da rodada 2
+            if (!eventActive && currentRound > 2 && (currentRound - lastEventEndRound) > eventCooldown) //se não tem nenhum evento ativo && o último evento aconteceu a mais de X rodadas
+            {
+                ChooseGlobalEvent();
+            }
         }
 
         if(ragnarokActive)

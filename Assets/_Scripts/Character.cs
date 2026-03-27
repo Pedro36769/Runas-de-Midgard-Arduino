@@ -4,6 +4,9 @@ using UnityEngine;
 public class Character : ScriptableObject
 {
     public string playerName;
+    public string abilityTitle;
+    public string abilityDesc;
+    public string abilityDesc2;
     public Sprite characterPortrait;
     public Sprite portraitFg;
     public Sprite portraitBg;

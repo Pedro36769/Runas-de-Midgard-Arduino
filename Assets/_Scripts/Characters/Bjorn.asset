@@ -13,10 +13,15 @@ MonoBehaviour:
   m_Name: Bjorn
   m_EditorClassIdentifier: Assembly-CSharp::Character
   playerName: "Bj\xF6rn"
+  abilityTitle: <b>Pescador de Guerreiros</b>
+  abilityDesc: "Bjorn pode puxar um jogador que esteja a at\xE9 <b>2 casas</b> de
+    dist\xE2ncia para a mesma casa que ele, for\xE7ando um <i>combate imediato</i>."
+  abilityDesc2: "Essa habilidade <i>n\xE3o</i> pode ser usada duas vezes seguidas
+    no mesmo jogador. "
   characterPortrait: {fileID: -696387706, guid: 7154cb21a06ae1941bb0be170ae54ba6, type: 3}
   portraitFg: {fileID: 4723932674285318951, guid: 31537141433c5cd478f48081c74de063, type: 3}
   portraitBg: {fileID: 2562609672409023636, guid: 31537141433c5cd478f48081c74de063, type: 3}
-  characterImage: {fileID: 21300000, guid: 5619b0364ba1b37438932d9566c7555b, type: 3}
+  characterImage: {fileID: -696387706, guid: 7154cb21a06ae1941bb0be170ae54ba6, type: 3}
   characterBanner: {fileID: -1583621263, guid: 0068e97a5d778c044a88a723dca34f8c, type: 3}
   characterCard: {fileID: -5917098985354326157, guid: 5898c6bdcd060814e8e8a7fa4b3b1264, type: 3}
   health: 20

@@ -8,14 +8,12 @@ public class BattleManager : MonoBehaviour
 {
     private bool twoPlayers;
     private int playersInCombat;
-    [SerializeField] private GameObject confirmAttackObj;
 
     [Header("UI de Combate")]
     [SerializeField] private GameObject battleCanvas;
     [SerializeField] private Image attackingPlayerImg;
     [SerializeField] private TMP_Text attackingPlayerText;
     [SerializeField] private ParticleSystem battleParticle;
-    [SerializeField] private GameObject mainElements;
 
     [Header("Configuração de Alvos")]
     [SerializeField] private TargetButtonUI[] targetButtons;
@@ -46,9 +44,7 @@ public class BattleManager : MonoBehaviour
 
     private void Start()
     {
-        mainElements.SetActive(true);
         battleCanvas.SetActive(false);
-        confirmAttackObj.SetActive(false);
         
         battleParticle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
 
@@ -74,7 +70,6 @@ public class BattleManager : MonoBehaviour
 
     public void BattleLogic()
     {
-        mainElements.SetActive(false);
         battleCanvas.SetActive(true);
         battleParticle.Play();
         SoundManager.Instance.PlaySFX("ArenaStart");
@@ -164,7 +159,7 @@ public class BattleManager : MonoBehaviour
 
         battleCanvas.SetActive(false);
         battleParticle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
-        mainElements.SetActive(true);
         Debug.Log("Combate resolvido e UI atualizada.");
+        //avançar mais uma rodada
     }
 }

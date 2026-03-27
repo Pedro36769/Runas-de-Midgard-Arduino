@@ -361,6 +361,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Clara_Card
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 1465
+        width: 390
+        height: 563
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd34c1b255742e41ab1071b320727a4
+      internalID: 331476910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -379,6 +401,7 @@ TextureImporter:
     nameFileIdTable:
       Asta_Card: 5489697662397856335
       Bjorn_Card: -5917098985354326157
+      Clara_Card: 331476910
       Eirik_Card: -8407227409705285989
       Eydis_Card: 6428616649371433020
       Hrothgar_Card: 6839169955827693322
