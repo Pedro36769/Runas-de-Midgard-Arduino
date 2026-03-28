@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text arenaText;
     [SerializeField] private TMP_Text currentEventText;
     [SerializeField] private TMP_Text eventDurationText;
+    [SerializeField] private TMP_Text eventDescriptionText;
 
     [Header("Player cards")]
     public PlayerCardUI player1Card;
@@ -98,6 +99,44 @@ public class GameManager : MonoBehaviour
         currentRound++;
         roundCounter.text = currentRound.ToString();
 
+        if (currentRound % 3 == 0 && currentRound != 0) //se divisível por 3, começa arena
+        {
+            arenaText.text = "É hora da batalha!";
+            SoundManager.Instance.PlaySFX("BattleStart");
+            roundCounter.color = Color.red;
+            SoundManager.Instance.SongControl("battle");
+            inBattle = true;
+            BattleManager.Instance.BattleLogic();
+        }
+        else //se não for arena
+        {
+            ClearUITexts();
+            roundCounter.color = Color.white;
+            inBattle = false;
+
+            if (eventActive)
+            {
+                eventDuration--;
+                if (eventDuration <= 0)
+                {
+                    eventActive = false;
+                    openEventBtn.SetActive(false);
+                    lastEventEndRound = currentRound;
+                    ClearUITexts();
+                }
+                else
+                {
+                    UpdateEventDuration();
+                }
+            }
+
+            //só tenta criar novo evento se não for arena e não houver um ativo
+            if (!eventActive && currentRound > 2 && (currentRound - lastEventEndRound) > eventCooldown)
+            {
+                ChooseGlobalEvent();
+            }
+        }
+
         if (eventActive)
         {
             eventDuration--;
@@ -111,28 +150,6 @@ public class GameManager : MonoBehaviour
             else
             {
                 UpdateEventDuration();
-            }
-        }
-
-        if (currentRound % 3 == 0 && currentRound != 0) //se divisível por 3, começa batalha e escolhe evento
-        {
-            arenaText.text = "É hora da batalha!";
-            SoundManager.Instance.PlaySFX("BattleStart");
-            roundCounter.color = Color.red;
-            SoundManager.Instance.SongControl("battle");
-            inBattle = true;
-            BattleManager.Instance.BattleLogic();
-        }
-        else
-        {
-            ClearUITexts();
-            roundCounter.color = Color.white;
-            inBattle = false;
-
-            //só escolhe evento se não for rodada múltipla de 3, e se tiver passado da rodada 2
-            if (!eventActive && currentRound > 2 && (currentRound - lastEventEndRound) > eventCooldown) //se não tem nenhum evento ativo && o último evento aconteceu a mais de X rodadas
-            {
-                ChooseGlobalEvent();
             }
         }
 
@@ -184,24 +201,33 @@ public class GameManager : MonoBehaviour
         { 
             chosenEvent = "Nevasca de Jotunheim"; 
             currentEventText.color = blizzardColor;
+            eventDescriptionText.text = "• Deslocamento reduzido pela metade. <br>• <color=#FFD900><b>-2 de Ataque</b></color> global (<color=#CCC>mínimo 1</color>).";
+            
             eventBtnImg.sprite = blizzardSprite;
             eventPopupIcon.sprite = blizzardSprite;
+
             SoundManager.Instance.PlaySFX("Blizzard");
         }
         else if(eventN == 1) 
         { 
             chosenEvent = "Maré de Jörmungandr"; 
             currentEventText.color = tidesOfMidgardColor; 
+            eventDescriptionText.text = "• Todas as <color=#FF3432><b>curas</b></color> recebem +5.<br>• <color=#00C8FF><b>Defesa</b></color> de todos reduzida em -3.";
+
             eventBtnImg.sprite = tidesOfMidgardSprite;
             eventPopupIcon.sprite = tidesOfMidgardSprite;
+
             SoundManager.Instance.PlaySFX("TidesSound");
         }
         else if(eventN == 2) 
         { 
             chosenEvent = "Caçada de Fenrir"; 
             currentEventText.color = fenrirsHuntColor; 
+            eventDescriptionText.text = "•  O jogador com maior <color=#FF3432><b>Vida</b></color> recebe <color=#FFD900><b>+2 de Ataque</b></color>.<br>• Esse mesmo jogador sofre <color=#00C8FF><b>-4 de Defesa</b></color>.";
+
             eventBtnImg.sprite = fenrirsHuntSprite;
             eventPopupIcon.sprite = fenrirsHuntSprite;
+
             SoundManager.Instance.PlaySFX("HuntSound");
         }
 
