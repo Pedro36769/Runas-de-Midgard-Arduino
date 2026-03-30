@@ -25319,7 +25319,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1912237073}
   - component: {fileID: 1912237072}
-  - component: {fileID: 1912237074}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -25339,6 +25338,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fcd4e11cbc38864d9ab7ecddf9666af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
+  songToPlay: GameSong
+  musicVolume: 1
+  sfxVolume: 1
 --- !u!4 &1912237073
 Transform:
   m_ObjectHideFlags: 0
@@ -25354,57 +25356,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1912237074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912237071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 517121491
-      Data2: 1253646271
-      Data3: -152859492
-      Data4: -871983856
-    Path: event:/Songs/GameSong
-  Event: 
-  EventPlayTrigger: 1
-  EventStopTrigger: 2
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params:
-  - Name: bassGroove
-    Value: 0
-  - Name: bassStraight
-    Value: 0
-  - Name: driveGuitar
-    Value: 0
-  - Name: grandfatherPads
-    Value: 0
-  - Name: icePads
-    Value: 1
-  - Name: kick
-    Value: 0
-  - Name: mandolin
-    Value: 0
-  - Name: snare
-    Value: 0
-  - Name: tomLow
-    Value: 0
-  - Name: foghorn
-    Value: 1
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &1916372925
 GameObject:
   m_ObjectHideFlags: 0

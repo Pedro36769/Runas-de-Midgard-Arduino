@@ -399,6 +399,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Icon_Ice
+      rect:
+        serializedVersion: 2
+        x: 2034
+        y: 869
+        width: 440
+        height: 467
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b125963e3f314f244bff4a5fd5270f50
+      internalID: -1630354057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -420,13 +442,13 @@ TextureImporter:
       Icon_Config: -2111082737
       Icon_Edit: -1830999261
       Icon_Heart: -210189480
+      Icon_Ice: -1630354057
       Icon_Manual: 1457108324
       Icon_Shield: -179374305
       Icon_Sword: 1803592873
       Icon_Wolf_Eyes: 476967768
       Icon_Wolf_Head: -2108332297
       Icons_Blizzard: 463655981
-      Icons_Spritesheet_0: -1630354057
       Icons_Spritesheet_4: -1777967637
       Icons_Tides: 1246008248
   mipmapLimitGroupName: 

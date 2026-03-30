@@ -1014,7 +1014,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -1833,7 +1833,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -2995,7 +2995,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -3546,7 +3546,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -3975,15 +3975,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
-        m_MethodName: SetupSongControl
-        m_Mode: 3
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: ShieldHit
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1258741549}
@@ -4386,7 +4386,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -5117,7 +5117,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -6872,7 +6872,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -7397,7 +7397,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -7633,7 +7633,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -9836,7 +9836,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -10058,9 +10058,9 @@ RectTransform:
   m_Father: {fileID: 1554595226}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -17, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &653253386
 MonoBehaviour:
@@ -10358,7 +10358,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -11885,7 +11885,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -12284,7 +12284,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1284305786}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
@@ -12523,7 +12523,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -14456,7 +14456,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -15237,7 +15237,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1284305786}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
@@ -15395,7 +15395,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -17792,7 +17792,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1284305786}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
@@ -18178,7 +18178,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1284305786}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
@@ -18537,7 +18537,7 @@ GameObject:
   - component: {fileID: 1284305785}
   - component: {fileID: 1284305786}
   m_Layer: 0
-  m_Name: SetupSoundManager
+  m_Name: SoundManager
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -18567,9 +18567,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1284305784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecf8fbc11b21de84692f4b85e2514dce, type: 3}
+  m_Script: {fileID: 11500000, guid: 8fcd4e11cbc38864d9ab7ecddf9666af, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SetupSoundManager
+  m_EditorClassIdentifier: Assembly-CSharp::SoundManager
+  songToPlay: SetupSong
+  musicVolume: 1
+  sfxVolume: 1
 --- !u!1 &1286168506
 GameObject:
   m_ObjectHideFlags: 0
@@ -19081,7 +19084,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -19661,8 +19664,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 944262803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.35201502}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -20233,7 +20236,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -20241,7 +20244,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: GenericClick
+          m_StringArgument: BackWooden
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 73125238}
@@ -20587,7 +20590,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -21865,7 +21868,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1284305786}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
@@ -23292,7 +23295,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -26027,7 +26030,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1284305786}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
@@ -26406,7 +26409,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -28024,7 +28027,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -28788,7 +28791,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2043363293
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29840,7 +29843,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1284305786}
-        m_TargetAssemblyTypeName: SetupSoundManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
         m_MethodName: PlaySFX
         m_Mode: 5
         m_Arguments:
@@ -30047,7 +30050,6 @@ GameObject:
   - component: {fileID: 2125345360}
   - component: {fileID: 2125345359}
   - component: {fileID: 2125345358}
-  - component: {fileID: 2125345361}
   m_Layer: 5
   m_Name: ContinueTogame Btn
   m_TagString: Untagged
@@ -30131,6 +30133,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1284305786}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlaySFX
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shield Hit Twice
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2125345359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30169,37 +30183,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125345356}
   m_CullTransparentMesh: 1
---- !u!114 &2125345361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2125345356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 1175650661
-      Data2: 1082075904
-      Data3: -617790031
-      Data4: 1447548629
-    Path: event:/SFXs/Shield Hit Twice
-  Event: 
-  EventPlayTrigger: 19
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!1 &2129613175
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{ce254b38-90f4-4771-9fa2-ca960b3895b6}">
+		<property name="assetPath">
+			<value>Charge Rune.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.2496371882086166</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ec8a8beb-6b3a-4434-963c-d3bcd2185a89}</destination>
+		</relationship>
+	</object>
+</objects>

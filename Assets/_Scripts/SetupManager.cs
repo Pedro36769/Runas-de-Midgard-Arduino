@@ -79,7 +79,7 @@ public class SetupManager : MonoBehaviour
         //procura na base de dados pelo nome recebido
         Character selectedData = GetCharacterByName(chosenCharName);
         if (selectedData == null) return; //se n achou faz o L
-        SetupSoundManager.Instance.PlaySFX("ShieldHit");
+        SoundManager.Instance.PlaySFX("ShieldHit");
 
         if (player1Char == null) 
         {
@@ -182,7 +182,7 @@ public class SetupManager : MonoBehaviour
 
     public void LoadPlayerScreen()
     {
-        SetupSoundManager.Instance.StopSong();
+        SoundManager.Instance.StopSong();
         SceneManager.LoadScene("TelaDeJogo", LoadSceneMode.Single);
     }
 }

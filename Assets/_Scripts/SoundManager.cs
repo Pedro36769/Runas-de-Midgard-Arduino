@@ -6,30 +6,58 @@ public class SoundManager : MonoBehaviour
 {
     private FMOD.Studio.EventInstance songInstance;
 
+    [SerializeField] private string songToPlay = "GameSong";
+
+    private Bus musicBus;
+    private Bus sfxBus;
+
+    [Range(0f, 1f)] public float musicVolume = 1f;
+    [Range(0f, 1f)] public float sfxVolume = 1f;
+
     public static SoundManager Instance { get; private set; }
 
     private void Awake()
     {
         //singleton
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            Instance = this;
-        }
+        if (Instance != null && Instance != this) Destroy(this.gameObject);
+        else Instance = this;
     }
 
     private void Start()
     {
-        songInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Songs/GameSong");
+        musicBus = RuntimeManager.GetBus("bus:/Music");
+        sfxBus = RuntimeManager.GetBus("bus:/SFX");
+
+        songInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Songs/" + songToPlay);
         songInstance.start();
+    }
+
+    public void SetMusicVol(float musicVolume)
+    {
+        musicBus.setVolume(musicVolume);
+    }
+    public void SetSFXVol(float sfxVolume)
+    {
+        sfxBus.setVolume(sfxVolume);
     }
 
     public void PlaySFX(string sfxPath)
     {
         RuntimeManager.PlayOneShot("event:/SFXs/" + sfxPath);
+    }
+
+    public void StopSong()
+    {
+        songInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        songInstance.release();
+    }
+
+    public void SetupSongControl(int step)
+    { 
+        //selecionando personagens
+        if(step == 1) songInstance.setParameterByName("mobiusPlucks", 1);
+        //personagens selecionados
+        if(step == 2) songInstance.setParameterByName("drone", 1);
     }
 
     public void SongControl(string mode)
