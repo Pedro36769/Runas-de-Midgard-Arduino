@@ -501,7 +501,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 2580205003124018359}
   cacheVersion: 131858
-  cacheTime: 639104614543394039
+  cacheTime: 639104930704731330
   SerializableEventsDict:
   - key: event:/SFXs/Ragnarok
     index: 0
@@ -587,7 +587,7 @@ MonoBehaviour:
   Path: FMOD/Midgard/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639104614543384040
+  lastModified: 639104930704710688
   FileSizes:
   - Name: Desktop
     Value: 13519968
@@ -685,7 +685,7 @@ MonoBehaviour:
   Path: FMOD/Midgard/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639104614543394039
+  lastModified: 639104930704731330
   FileSizes:
   - Name: Desktop
     Value: 2248

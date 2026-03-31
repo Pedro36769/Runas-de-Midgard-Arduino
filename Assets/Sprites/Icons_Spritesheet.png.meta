@@ -421,6 +421,72 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Icon_Arrow
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 479
+        width: 197
+        height: 343
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91cd7d7a0d14a72448d9d4cc818ed2cf
+      internalID: -809219447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Return
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 479
+        width: 473
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7248c9dc842b41b4aab57c62f030646d
+      internalID: -337679338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Pause
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 441
+        width: 243
+        height: 318
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d229d4ef65fabef4cbf117bef37b68f7
+      internalID: 1518349020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -439,16 +505,20 @@ TextureImporter:
     nameFileIdTable:
       Btn_Small_0: -1948259893
       Btn_Small_1: -1262672625
+      Icon_Arrow: -809219447
       Icon_Config: -2111082737
       Icon_Edit: -1830999261
       Icon_Heart: -210189480
       Icon_Ice: -1630354057
       Icon_Manual: 1457108324
+      Icon_Pause: 1518349020
+      Icon_Return: -337679338
       Icon_Shield: -179374305
       Icon_Sword: 1803592873
       Icon_Wolf_Eyes: 476967768
       Icon_Wolf_Head: -2108332297
       Icons_Blizzard: 463655981
+      Icons_Spritesheet_1: 987246575
       Icons_Spritesheet_4: -1777967637
       Icons_Tides: 1246008248
   mipmapLimitGroupName: 

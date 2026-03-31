@@ -23,15 +23,6 @@ public class SoundManager : MonoBehaviour
         else Instance = this;
     }
 
-    private void Start()
-    {
-        musicBus = RuntimeManager.GetBus("bus:/Music");
-        sfxBus = RuntimeManager.GetBus("bus:/SFX");
-
-        songInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Songs/" + songToPlay);
-        songInstance.start();
-    }
-
     public void SetMusicVol(float musicVolume)
     {
         musicBus.setVolume(musicVolume);
@@ -39,6 +30,20 @@ public class SoundManager : MonoBehaviour
     public void SetSFXVol(float sfxVolume)
     {
         sfxBus.setVolume(sfxVolume);
+    }
+
+    private void Start()
+    {
+        musicBus = RuntimeManager.GetBus("bus:/Music");
+        sfxBus = RuntimeManager.GetBus("bus:/SFX");
+
+        songInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Songs/" + songToPlay);
+        songInstance.start();
+
+        if(songToPlay=="GameSong")
+        {
+            SongControl("earlyGame");
+        }
     }
 
     public void PlaySFX(string sfxPath)
