@@ -18,12 +18,12 @@ O altar utiliza:
 - Arduino NANO ou UNO escondido abaixo do altar.
 - Sensor de toque
 
-**Sensor Magnético**: (_Ky-003_)
+**Sensor Magnético**: (`Ky-003`)
 Escolhemos um sensor digital pois precisamos detectar apenas a presença de campo magnético, não sua intensidade. O componente opera entre 4V~ e 24V~, não sendo necessário resistor. 
 
-**LED Ring**: (_WCMCU-2812B-12_)
+**LED Ring**: (`WCMCU-2812B-12`)
 Cada LED, em seu brilho máximo, chega a uma corrente de 50mA. Portanto, o máximo que o LED Ring pode precisar são 0,6A. 
 Colocaremos um resistor 470Ω entre o pino 7 e a entrada DI para evitar que picos de tensão danifiquem o componente.
 
-**Módulo Bluetooth**: (HC-06)
+**Módulo Bluetooth**: (`HC-06`)
 Escolhemos o HC-06 pois atua apenas como escravo.
