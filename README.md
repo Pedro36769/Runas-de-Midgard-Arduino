@@ -10,11 +10,10 @@ Para a implementação do áudio, usaremos FMOD para garantir música e efeitos 
 ### **Hardware**
 O altar utiliza:
 - Sensor Magnético para detectar a presença da peça.
-- Resistor 10kΩ
+- 3 Resistor 10kΩ
 - LED Ring com 12 LEDs para indicar o tipo de runa como uma roleta.
 - Resistor 470Ω
 - Módulo Bluetooth para comunicação com o aplicativo. 
-- 3 resistores 1kΩ
 - Arduino NANO ou UNO escondido abaixo do altar.
 - Sensor de toque
 
@@ -23,7 +22,6 @@ Escolhemos um sensor digital pois precisamos detectar apenas a presença de camp
 
 **LED Ring**: (`WCMCU-2812B-12`)
 Cada LED, em seu brilho máximo, chega a uma corrente de 50mA. Portanto, o máximo que o LED Ring pode precisar são 0,6A. 
-Colocaremos um resistor 470Ω entre o pino 7 e a entrada DI para evitar que picos de tensão danifiquem o componente.
 
 **Módulo Bluetooth**: (`HC-06`)
-Escolhemos o HC-06 pois atua apenas como escravo.
+Escolhemos o HC-06 pois atua apenas como escravo. Os 3 resistores de 10kΩ são necessários para dividir a tensão.
