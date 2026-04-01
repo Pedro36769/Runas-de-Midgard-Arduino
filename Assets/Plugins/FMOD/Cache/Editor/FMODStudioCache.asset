@@ -495,13 +495,14 @@ MonoBehaviour:
   - {fileID: -1278672411917033483}
   - {fileID: 1887777340274234522}
   - {fileID: 8348559797825470558}
+  - {fileID: 5825801634582965256}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1593385495771005620}
   StringsBanks:
   - {fileID: 2580205003124018359}
   cacheVersion: 131858
-  cacheTime: 639104614543394039
+  cacheTime: 639105898044247181
   SerializableEventsDict:
   - key: event:/SFXs/Ragnarok
     index: 0
@@ -543,6 +544,8 @@ MonoBehaviour:
     index: 18
   - key: event:/SFXs/Locked
     index: 19
+  - key: event:/SFXs/HorseSnort
+    index: 20
 --- !u!114 &867499156086362186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,10 +590,10 @@ MonoBehaviour:
   Path: FMOD/Midgard/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639104614543384040
+  lastModified: 639105898044232003
   FileSizes:
   - Name: Desktop
-    Value: 13519968
+    Value: 13531232
   Exists: 1
 --- !u!114 &1759352468675033762
 MonoBehaviour:
@@ -685,10 +688,10 @@ MonoBehaviour:
   Path: FMOD/Midgard/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639104614543394039
+  lastModified: 639105898044247181
   FileSizes:
   - Name: Desktop
-    Value: 2248
+    Value: 2288
   Exists: 1
 --- !u!114 &3367754157965058791
 MonoBehaviour:
@@ -768,6 +771,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8600
+--- !u!114 &5825801634582965256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFXs/HorseSnort
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/SFXs/HorseSnort
+  Guid:
+    Data1: -1544008755
+    Data2: 1206430617
+    Data3: -1045193799
+    Data4: -433250197
+  Banks:
+  - {fileID: 1593385495771005620}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 976
 --- !u!114 &6136842563373015094
 MonoBehaviour:
   m_ObjectHideFlags: 0
