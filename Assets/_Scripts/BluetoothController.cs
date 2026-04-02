@@ -64,6 +64,16 @@ public class BluetoothController : MonoBehaviour
         
         // Atualiza o texto na tela (deve ser feito na thread principal)
         Debug.Log("Recebido do Arduino: " + receivedDataString);
+
+        if(receivedDataString == "magnetOn")
+        {
+            //escolher runa    
+        }
+
+        if(receivedDataString == "touchPress")
+        {
+            SoundManager.Instance.PlaySFX("RiskyCharge");
+        }
     }
 
     private void Update()

@@ -13919,9 +13919,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "<b>Cora Hutz</b> - Game Design, Programa\xE7\xE3o, M\xFAsica, Sound Design,
-    UI/UX, Eletr\xF4nica\n\n<b>Gabriel Noah</b> - Game Design, Modelagem 3D\n\n<b>Guilherme
-    Marucci</b> - Game Design, Arte\n\n<b>Jo\xE3o Felipe</b> - Game Design, Wireframe\n\n<b>Pedro
-    Paulo</b> - Game Design, Arte Vetorial, Dire\xE7\xE3o de Arte"
+    UI/UX, Eletr\xF4nica, Anima\xE7\xE3o\n\n<b>Gabriel Noah</b> - Game Design, Modelagem
+    3D\n\n<b>Guilherme Marucci</b> - Game Design, Arte\n\n<b>Jo\xE3o Felipe</b> -
+    Game Design, Wireframe\n\n<b>Pedro Paulo</b> - Game Design, Arte Vetorial, Dire\xE7\xE3o
+    de Arte"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: faa4c391776212848a5e6cc097d5b603, type: 2}
   m_sharedMaterial: {fileID: -5744608052317140583, guid: faa4c391776212848a5e6cc097d5b603, type: 2}
@@ -13948,7 +13949,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 51.8
+  m_fontSize: 48.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

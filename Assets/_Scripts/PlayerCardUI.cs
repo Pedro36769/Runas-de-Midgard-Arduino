@@ -52,20 +52,27 @@ public class PlayerCardUI : MonoBehaviour
         //textos
         cardName = characterData.playerName;
         nameText.text = cardName;
-            
+
+        //inicializa os valores
         currentHp = characterData.health;
-        if(hpText!=null) hpText.text = currentHp.ToString();
-        if(inputHp!=null) inputHp.text = currentHp.ToString();
-
         currentDmg = characterData.damage;
-        if(dmgText!=null) dmgText.text = currentDmg.ToString();
-        if(inputDmg!=null) inputDmg.text = currentDmg.ToString();
-
         currentDef = characterData.defense;
-        if(defText!=null) defText.text = currentDef.ToString();
-        if(inputDef!=null) inputDef.text = currentDef.ToString();
+
+        UpdateValuesUI();
 
         if(popUp!=null) popUp.SetupPopUp(characterData);
+    }
+
+    private void UpdateValuesUI()
+    {
+        if(hpText!=null) hpText.text = currentHp.ToString();
+        if(inputHp!=null) inputHp.text = currentHp.ToString();
+   
+        if(dmgText!=null) dmgText.text = currentDmg.ToString();
+        if(inputDmg!=null) inputDmg.text = currentDmg.ToString();
+        
+        if(defText!=null) defText.text = currentDef.ToString();
+        if(inputDef!=null) inputDef.text = currentDef.ToString();
     }
 
     public void ChangeHealth(string inputtedHp)
@@ -149,7 +156,7 @@ public class PlayerCardUI : MonoBehaviour
         Debug.Log("Vida anterior: " + previousHp + ". Vida atual: " + currentHp);
         Debug.Log("Player " + cardName + " sofreu um ataque de " + incomingDamage + " de poder.");
 
-        ChangeHealth(currentHp.ToString());
+        UpdateValuesUI();
     }
     public void DestroyCard()
     {

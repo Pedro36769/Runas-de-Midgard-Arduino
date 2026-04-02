@@ -10,18 +10,22 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Image eventBtnImg;
     [SerializeField] private Image eventPopupIcon;
 
-    [Header ("Imagens")]
+    [Header("Eventos")]
     [SerializeField] private Sprite blizzardSprite;
+    [SerializeField] private ParticleSystem snowParticle;
     [SerializeField] private Sprite tidesOfMidgardSprite;
+    [SerializeField] private GameObject wavesObj;
     [SerializeField] private Sprite fenrirsHuntSprite;
+    [SerializeField] private GameObject fenrirObj;
+    [SerializeField] private TMP_Text currentEventText;
+    [SerializeField] private TMP_Text eventDurationText;
+    [SerializeField] private TMP_Text eventRoundCounter;
+    [SerializeField] private TMP_Text eventDescriptionText;
 
     [Header("Textos")]
     [SerializeField] private TMP_Text roundText;
     [SerializeField] private TMP_Text roundCounter;
     [SerializeField] private TMP_Text arenaText;
-    [SerializeField] private TMP_Text currentEventText;
-    [SerializeField] private TMP_Text eventDurationText;
-    [SerializeField] private TMP_Text eventDescriptionText;
 
     [Header("Player cards")]
     public PlayerCardUI player1Card;
@@ -56,24 +60,14 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         //singleton
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
+        if (Instance != null && Instance != this) Destroy(this.gameObject);
+        else Instance = this; DontDestroyOnLoad(this.gameObject);
+
         ClearUITexts();
     }
 
     private void Start()
     {
-        if(SetupManager.Instance==null)
-        {
-            Debug.LogError("Não achei o SetupManager, começa a partir da cena Setup");
-        }
         player1Card.SetupCard(SetupManager.Instance.player1Char);
         player2Card.SetupCard(SetupManager.Instance.player2Char);
         if(SetupManager.Instance.twoPlayerMode) //se tiver só dois players, destrói as outras cartas
@@ -92,6 +86,10 @@ public class GameManager : MonoBehaviour
 
         eventPopUp.SetActive(false);
         openEventBtn.SetActive(false);
+
+        snowParticle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+        wavesObj.SetActive(false);
+        fenrirObj.SetActive(false);
     }
 
     public void NextRound()
@@ -121,7 +119,8 @@ public class GameManager : MonoBehaviour
                 {
                     eventActive = false;
                     openEventBtn.SetActive(false);
-                    lastEventEndRound = currentRound;
+
+                    lastEventEndRound = currentRound; //evento acabou nessa rodada
                     ClearUITexts();
                 }
                 else
@@ -134,22 +133,6 @@ public class GameManager : MonoBehaviour
             if (!eventActive && currentRound > 2 && (currentRound - lastEventEndRound) > eventCooldown)
             {
                 ChooseGlobalEvent();
-            }
-        }
-
-        if (eventActive)
-        {
-            eventDuration--;
-            if (eventDuration <= 0)
-            {
-                eventActive = false;
-                openEventBtn.SetActive(false);
-                lastEventEndRound = currentRound; //o evento acabou nessa rodada
-                ClearUITexts();
-            }
-            else
-            {
-                UpdateEventDuration();
             }
         }
 
@@ -201,34 +184,40 @@ public class GameManager : MonoBehaviour
         { 
             chosenEvent = "Nevasca de Jotunheim"; 
             currentEventText.color = blizzardColor;
+            eventRoundCounter.color = blizzardColor;
             eventDescriptionText.text = "• Deslocamento reduzido pela metade. <br>• <color=#FFD900><b>-2 de Ataque</b></color> global (<color=#CCC>mínimo 1</color>).";
             
             eventBtnImg.sprite = blizzardSprite;
             eventPopupIcon.sprite = blizzardSprite;
 
             SoundManager.Instance.PlaySFX("Blizzard");
+            snowParticle.Play();
         }
         else if(eventN == 1) 
         { 
             chosenEvent = "Maré de Jörmungandr"; 
             currentEventText.color = tidesOfMidgardColor; 
+            eventRoundCounter.color = tidesOfMidgardColor;
             eventDescriptionText.text = "• Todas as <color=#FF3432><b>curas</b></color> recebem +5.<br>• <color=#00C8FF><b>Defesa</b></color> de todos reduzida em -3.";
 
             eventBtnImg.sprite = tidesOfMidgardSprite;
             eventPopupIcon.sprite = tidesOfMidgardSprite;
 
             SoundManager.Instance.PlaySFX("TidesSound");
+            wavesObj.SetActive(true);
         }
         else if(eventN == 2) 
         { 
             chosenEvent = "Caçada de Fenrir"; 
             currentEventText.color = fenrirsHuntColor; 
+            eventRoundCounter.color = fenrirsHuntColor;
             eventDescriptionText.text = "•  O jogador com maior <color=#FF3432><b>Vida</b></color> recebe <color=#FFD900><b>+2 de Ataque</b></color>.<br>• Esse mesmo jogador sofre <color=#00C8FF><b>-4 de Defesa</b></color>.";
 
             eventBtnImg.sprite = fenrirsHuntSprite;
             eventPopupIcon.sprite = fenrirsHuntSprite;
 
             SoundManager.Instance.PlaySFX("HuntSound");
+            fenrirObj.SetActive(true);
         }
 
         ShowEventPopUp(true);
@@ -240,6 +229,7 @@ public class GameManager : MonoBehaviour
     {
         string plural = eventDuration > 1 ? "s" : ""; //se for maior que 1, adiciona o 's'
         eventDurationText.text = $"O evento vai durar por: {eventDuration} rodada{plural}.";
+        eventRoundCounter.text = $"( {eventDuration} )";
     }
 
     public void ShowEventPopUp(bool show)
@@ -254,7 +244,12 @@ public class GameManager : MonoBehaviour
         if(!eventActive) //só limpa texto do evento se não tiver um evento ativo
         {
             eventDurationText.text = "";
+            eventRoundCounter.text = "";
             currentEventText.text = "";
+
+            snowParticle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            wavesObj.SetActive(false);
+            fenrirObj.SetActive(false);
         }
     }
 }
