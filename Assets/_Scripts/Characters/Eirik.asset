@@ -17,7 +17,7 @@ MonoBehaviour:
   abilityDesc: "Quando este personagem cair em uma casa de runa ou consum\xEDvel,
     ele pode <b>mover 1 casa adicional</b> imediatamente ap\xF3s pegar o item ou
     runa."
-  abilityDesc2: "Passiva: Bolsa sem fundo <b>Limite de runas e consum\xEDveis aumenta
+  abilityDesc2: "Passiva: Bolsa sem fundo Limite de runas e consum\xEDveis <b>aumenta
     em 2.</b>"
   characterPortrait: {fileID: 1390216330, guid: 7154cb21a06ae1941bb0be170ae54ba6, type: 3}
   portraitFg: {fileID: 3621396494643708516, guid: 31537141433c5cd478f48081c74de063, type: 3}

@@ -487,6 +487,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: 4p_Icon
+      rect:
+        serializedVersion: 2
+        x: 2088
+        y: 377
+        width: 419
+        height: 421
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c0250cde4ec15439e255416e82eb7a
+      internalID: -2025672033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2p_Icon
+      rect:
+        serializedVersion: 2
+        x: 2034
+        y: 0
+        width: 516
+        height: 327
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d4992e73a4bcc42a99ee352400baa4
+      internalID: 1611983662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -503,6 +547,8 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":2,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
+      2p_Icon: 1611983662
+      4p_Icon: -2025672033
       Btn_Small_0: -1948259893
       Btn_Small_1: -1262672625
       Icon_Arrow: -809219447
@@ -519,6 +565,7 @@ TextureImporter:
       Icon_Wolf_Head: -2108332297
       Icons_Blizzard: 463655981
       Icons_Spritesheet_1: 987246575
+      Icons_Spritesheet_3: 2031787751
       Icons_Spritesheet_4: -1777967637
       Icons_Tides: 1246008248
   mipmapLimitGroupName: 
