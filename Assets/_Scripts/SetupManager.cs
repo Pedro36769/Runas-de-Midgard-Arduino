@@ -84,7 +84,7 @@ public class SetupManager : MonoBehaviour
         if (player1Char == null) 
         {
             player1Char = selectedData;
-            chooseCharacterText.text = "Jogador 2<br>Escolha seu personagem:";
+            chooseCharacterText.text = "<b>Jogador 2</b><br>Escolha seu personagem:";
             return;
         }
         
@@ -92,7 +92,7 @@ public class SetupManager : MonoBehaviour
         {
             player2Char = selectedData;
             if (twoPlayerMode) ShowChosenCharacters();
-            else chooseCharacterText.text = "Jogador 3<br>Escolha seu personagem:";
+            else chooseCharacterText.text = "<b>Jogador 3</b><br>Escolha seu personagem:";
             return;
         }
 
@@ -101,7 +101,7 @@ public class SetupManager : MonoBehaviour
             if (player3Char == null)
             {
                 player3Char = selectedData;
-                chooseCharacterText.text = "Jogador 4<br>Escolha seu personagem:";
+                chooseCharacterText.text = "<b>Jogador 4</b><br>Escolha seu personagem:";
                 return;
             }
             
@@ -184,5 +184,12 @@ public class SetupManager : MonoBehaviour
     {
         SoundManager.Instance.StopSong();
         SceneManager.LoadScene("TelaDeJogo", LoadSceneMode.Single);
+    }
+
+    public void LoadMenuScreen()
+    {
+        SoundManager.Instance.StopSong();
+        Destroy(this.gameObject);
+        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
     }
 }

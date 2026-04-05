@@ -13,9 +13,14 @@ MonoBehaviour:
   m_Name: Asta
   m_EditorClassIdentifier: Assembly-CSharp::Character
   playerName: Asta
-  abilityTitle: "<b>T\xEDtulo da Habilidade</b>"
-  abilityDesc: "Descri\xE7\xE3o da habilidade"
-  abilityDesc2: "Descri\xE7\xE3o da habilidade 2"
+  abilityTitle: <b>Drenar</b>
+  abilityDesc: Cause dano igual ao seu       <color=#FFD900><b>Ataque</b></color>
+    em todos os jogadores com <b>Parasita de Sangue</b>.  Em seguida, recupere <b>metade</b>
+    do dano causado (<color=#CCC><i>arredondado para baixo</i></color>).
+  abilityDesc2: "Passiva: <b>Parasita de Sangue</b> Sempre que voc\xEA entrar em
+    <b>combate fora da Arena</b>, aplique um <b>Parasita de Sangue</b> no jogador
+    enfrentado. Um jogador com <b>Parasita</b> s\xF3 pode remov\xEA-lo ao entrar
+    em combate com voc\xEA novamente. "
   characterPortrait: {fileID: 2050889645, guid: 7154cb21a06ae1941bb0be170ae54ba6, type: 3}
   portraitFg: {fileID: -1017157587, guid: 31537141433c5cd478f48081c74de063, type: 3}
   portraitBg: {fileID: 2024198713, guid: 31537141433c5cd478f48081c74de063, type: 3}

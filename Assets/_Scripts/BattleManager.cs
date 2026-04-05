@@ -15,6 +15,13 @@ public class BattleManager : MonoBehaviour
     [SerializeField] private TMP_Text attackingPlayerText;
     [SerializeField] private ParticleSystem battleParticle;
 
+    [Header("Resumo da Arena")]
+    [SerializeField] private GameObject arenaResumeCanvas;
+    [SerializeField] private Image[] attackingPlayerImages;
+    [SerializeField] private Image[] defendingPlayerImages;
+    [SerializeField] private TMP_Text[] takenDmgText;
+    [SerializeField] private GameObject[] summaryRows;
+
     [Header("Configuração de Alvos")]
     [SerializeField] private TargetButtonUI[] targetButtons;
 
@@ -45,6 +52,7 @@ public class BattleManager : MonoBehaviour
     private void Start()
     {
         battleCanvas.SetActive(false);
+        arenaResumeCanvas.SetActive(false);
         
         battleParticle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
 
@@ -80,12 +88,13 @@ public class BattleManager : MonoBehaviour
     {
         // checa quantos players ainda estão vivos
         alivePlayers.Clear();
-        if (player1Hp > 0) alivePlayers.Add(player1Card);
-        if (player2Hp > 0) alivePlayers.Add(player2Card);
+        if (player1Card.currentHp > 0) alivePlayers.Add(player1Card);
+        if (player2Card.currentHp > 0) alivePlayers.Add(player2Card);
+        
         if (!twoPlayers)
         {
-            if (player3Hp > 0) alivePlayers.Add(player3Card);
-            if (player4Hp > 0) alivePlayers.Add(player4Card);
+            if (player3Card.currentHp > 0) alivePlayers.Add(player3Card);
+            if (player4Card.currentHp > 0) alivePlayers.Add(player4Card);
         }
 
         // decide quem vai atacar primeiro
@@ -149,17 +158,50 @@ public class BattleManager : MonoBehaviour
 
     private void ResolveDamage()
     {
+        //desativa todas as linhas do resumo pra limpar o round anterior
+        for (int i = 0; i < attackingPlayerImages.Length; i++)
+        {
+            summaryRows[i].SetActive(false); //desativa o row inteiro se n tiver a imagem
+        }
+
+        int index = 0;
+
+        //resolve o dano e preenche a UI
         foreach (KeyValuePair<PlayerCardUI, PlayerCardUI> combatPair in attackTargets)
         {
             PlayerCardUI attacker = combatPair.Key;
             PlayerCardUI target = combatPair.Value;
 
             target.TakeDamage(attacker.currentDmg);
+
+            //evita erro OutOfBounds se por algum motivo houver mais ataques que slots de UI
+            if (index < attackingPlayerImages.Length) 
+            {
+                //reativa a UI correspondente a este ataque
+                if (index < summaryRows.Length && summaryRows[index] != null)
+                    summaryRows[index].SetActive(true);
+                else
+                {
+                    attackingPlayerImages[index].gameObject.SetActive(true);
+                    defendingPlayerImages[index].gameObject.SetActive(true);
+                }
+
+                //substitui os sprites
+                attackingPlayerImages[index].sprite = attacker.portraitImage.sprite;
+                defendingPlayerImages[index].sprite = target.portraitImage.sprite;
+
+                //atualiza o texto com o dano tomado
+                if (index < takenDmgText.Length && takenDmgText[index] != null)
+                {
+                    takenDmgText[index].text = $"- {attacker.currentDmg}";
+                }
+                
+                index++;
+            }
         }
 
         battleCanvas.SetActive(false);
         battleParticle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
-        Debug.Log("Combate resolvido e UI atualizada.");
-        //avançar mais uma rodada
+        arenaResumeCanvas.SetActive(true);
     }
 }

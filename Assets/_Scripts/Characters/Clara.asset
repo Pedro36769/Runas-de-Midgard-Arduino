@@ -13,9 +13,15 @@ MonoBehaviour:
   m_Name: Clara
   m_EditorClassIdentifier: Assembly-CSharp::Character
   playerName: Clara
-  abilityTitle: "<b>T\xEDtulo da Habilidade</b>"
-  abilityDesc: "Descri\xE7\xE3o da habilidade"
-  abilityDesc2: "Descri\xE7\xE3o da habilidade 2"
+  abilityTitle: <b>Torcer o Destino</b>
+  abilityDesc: "Quando ativada, na pr\xF3xima vez que um jogador obtiver uma runa
+    nesta rodada, ele deve <b>sortear duas runas</b> em vez de uma. Voc\xEA <b>escolhe
+    qual ele ir\xE1 manter</b>, colocando a outra de volta no baralho. Pode ser usada
+    <b>2x</b> por partida."
+  abilityDesc2: "Passiva: <b>Troca-Troca</b> No in\xEDcio da partida, <b>escolha
+    um n\xFAmero de 1 a 6</b> e declare em voz alta.  Sempre que voc\xEA rolar o
+    dado e obter esse n\xFAmero, pode <b>trocar a posi\xE7\xE3o de dois jogadores</b>
+    no tabuleiro."
   characterPortrait: {fileID: 706338885, guid: 7154cb21a06ae1941bb0be170ae54ba6, type: 3}
   portraitFg: {fileID: -2019196691, guid: 31537141433c5cd478f48081c74de063, type: 3}
   portraitBg: {fileID: -108423580, guid: 31537141433c5cd478f48081c74de063, type: 3}
