@@ -12,6 +12,11 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("TelaSetup", LoadSceneMode.Single);
     }
+    
+    public void LoadBluetoothDebug()
+    {
+        SceneManager.LoadScene("BluetoothManagerExample", LoadSceneMode.Single);
+    }
 
     public void OpenLink(string link)
     {

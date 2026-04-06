@@ -1,95 +1,172 @@
+using BlueUnity;
+using System.Collections;
+using System.Collections.Generic; // Necessário para a Queue
+using System.Text;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using BlueUnity;
-using TMPro;
-using System.Collections;
-using System.Text;
 
 public class BluetoothController : MonoBehaviour
 {
-    [Header("UI References")]
-    [SerializeField] private TMP_Text status;
-    [SerializeField] private TMP_InputField dataToSend;
-    [SerializeField] private Toggle pairingToggle;
-    [SerializeField] private TMP_Text receivedTextDisplay; // Para mostrar a última mensagem
+    [Header("Configurações de UI")]
+    [Tooltip("O container (ex: Content do ScrollView) onde os botões aparecerão")]
+    public Transform devicesContainer;
+    [Tooltip("Prefab do botão para cada dispositivo encontrado")]
+    public GameObject deviceButtonPrefab;
+    [Tooltip("Texto para exibir o status atual da conexão")]
+    public TMP_Text statusText;
 
-    [Header("Settings")]
-    [SerializeField] private int discoverableDuration = 120;
-    
     private BluetoothHandler bluetooth;
-    private string receivedDataString = string.Empty;
+    private bool isConnected = false;
+    
+    // Controle de Mensagens (Buffer para evitar strings cortadas)
+    private string messageBuffer = string.Empty;
+    private bool shouldSendReply = false;
+
+    // Gerenciamento de UI e Threads
+    private string statusMessageToUpdate = string.Empty;
+    private bool hasNewStatus = false;
+    private struct DeviceInfo { public string name; public string address; }
+    private Queue<DeviceInfo> devicesFoundQueue = new Queue<DeviceInfo>();
 
     IEnumerator Start()
     {
         bluetooth = BluetoothHandler.Instance;
-        status.text = "BlueUnity waiting for enable bluetooth";
+        UpdateStatus("Inicializando Bluetooth...");
         
+        // Aguarda o Bluetooth estar pronto
         yield return new WaitUntil(() => bluetooth.Enabled);
 
-        // Assinando os Eventos do Plugin
-        bluetooth.ScanStartedAction += () => status.text = "Escaneando...";
-        bluetooth.ConnectedAction += (address) => status.text = "Conectado: " + address;
-        bluetooth.DisconnectedAction += (address) => status.text = "Desconectado";
-        bluetooth.ErrorAction += (error) => status.text = "Erro: " + error;
-        
-        // Evento crucial para RECEBER dados
+        // Callbacks do BlueUnity
+        bluetooth.ScanDeviceFoundAction += OnDeviceFound;
+        bluetooth.ConnectedAction += OnConnected;
+        bluetooth.DisconnectedAction += OnDisconnected;
         bluetooth.DataReceivedAction += OnDataReceived;
+        bluetooth.ErrorAction += OnError;
 
-        bluetooth.SetDeviceName("MeuAppUnity");
-        status.text = "Pronto para Conectar";
-
-        pairingToggle.onValueChanged.AddListener(SetPairing);
-    }
-
-    // --- ENVIAR MENSAGEM ---
-    // Chame esta função em um Botão no Unity (OnClick)
-    public void SendToArduino()
-    {
-        if (bluetooth != null && !string.IsNullOrEmpty(dataToSend.text))
-        {
-            // Converte o texto do InputField para Bytes e envia
-            byte[] bytes = Encoding.UTF8.GetBytes(dataToSend.text);
-            bluetooth.Write(bytes);
-            
-            Debug.Log("Enviado: " + dataToSend.text);
-            dataToSend.text = ""; // Limpa o campo após enviar
-        }
-    }
-
-    // --- RECEBER MENSAGEM ---
-    private void OnDataReceived(byte[] data)
-    {
-        // Converte os bytes que o Arduino enviou de volta para string
-        receivedDataString = Encoding.UTF8.GetString(data);
+        UpdateStatus("Bluetooth Pronto. Toque em 'Escanear'.");
         
-        // Atualiza o texto na tela (deve ser feito na thread principal)
-        Debug.Log("Recebido do Arduino: " + receivedDataString);
-
-        if(receivedDataString == "magnetOn")
-        {
-            //escolher runa    
-        }
-
-        if(receivedDataString == "touchPress")
-        {
-            SoundManager.Instance.PlaySFX("RiskyCharge");
-        }
+        // Se quiser que ele comece a buscar sozinho ao abrir a tela, descomente a linha abaixo:
+        // IniciarScan();
     }
 
     private void Update()
     {
-        // Como o evento de recebimento pode vir de outra thread, 
-        // atualizamos a UI aqui para evitar erros de thread do Unity
-        if (!string.IsNullOrEmpty(receivedDataString))
+        // 1. Processa novos dispositivos encontrados na Main Thread
+        while (devicesFoundQueue.Count > 0)
         {
-            receivedTextDisplay.text = "Arduino diz: " + receivedDataString;
+            DeviceInfo device = devicesFoundQueue.Dequeue();
+            CriarBotaoDispositivo(device.name, device.address);
+        }
+
+        // 2. Atualiza texto de status
+        if (hasNewStatus)
+        {
+            hasNewStatus = false;
+            if (statusText != null) statusText.text = statusMessageToUpdate;
+        }
+
+        // 3. Verifica se precisa responder ao Arduino
+        if (shouldSendReply)
+        {
+            shouldSendReply = false;
+            ResponderRoxa();
         }
     }
 
-    public void SetPairing(bool isOn) => bluetooth.SetPairing(isOn);
-    
+    // --- MÉTODOS DE AÇÃO ---
+
+    public void IniciarScan()
+    {
+        // Limpa lista visual antes de novo scan
+        foreach (Transform child in devicesContainer) Destroy(child.gameObject);
+        
+        UpdateStatus("Buscando dispositivos...");
+        bluetooth.StartScan();
+    }
+
+    private void Conectar(string endereco)
+    {
+        bluetooth.StopScan();
+        UpdateStatus("Conectando... Verifique notificações de pareamento.");
+        bluetooth.ConnectAsClient(endereco);
+    }
+
+    private void ResponderRoxa()
+    {
+        if (!isConnected) return;
+        
+        // Enviamos com \n para que o Arduino saiba onde a mensagem termina
+        byte[] data = Encoding.UTF8.GetBytes("ROXA\n");
+        bluetooth.Write(data);
+        UpdateStatus("Comando 'ROXA' enviado!");
+    }
+
+    // --- CALLBACKS DO SISTEMA ---
+
+    private void OnDeviceFound(string name, string address)
+    {
+        if (string.IsNullOrEmpty(name) || name.ToLower().Contains("unknown")) return; //caso não tenha nome ou seja desconhecido, não aparece na lista
+        devicesFoundQueue.Enqueue(new DeviceInfo { name = name, address = address });
+    }
+
+    private void OnDataReceived(byte[] data)
+    {
+        string chunk = Encoding.UTF8.GetString(data);
+        messageBuffer += chunk;
+
+        // Se o buffer contém a palavra-chave
+        if (messageBuffer.Contains("ESCOLHER_RUNA"))
+        {
+            messageBuffer = string.Empty; // Limpa para a próxima
+            shouldSendReply = true;       // Ativa a flag para o Update()
+        }
+    }
+
+    private void OnConnected(string address)
+    {
+        isConnected = true;
+        UpdateStatus($"Conectado a: {address}");
+    }
+
+    private void OnDisconnected(string address)
+    {
+        isConnected = false;
+        UpdateStatus("Dispositivo desconectado.");
+    }
+
+    private void OnError(string error)
+    {
+        UpdateStatus($"Erro: {error}");
+    }
+
+    // --- AUXILIARES ---
+
+    private void CriarBotaoDispositivo(string nome, string endereco)
+    {
+        GameObject btnObj = Instantiate(deviceButtonPrefab, devicesContainer);
+        
+        // Configura o texto do botão
+        TMP_Text txt = btnObj.GetComponentInChildren<TMP_Text>();
+        if (txt != null) txt.text = $"{(string.IsNullOrEmpty(nome) ? "Desconhecido" : nome)}\n<size=60%>{endereco}</size>";
+
+        // Configura o clique
+        Button btn = btnObj.GetComponent<Button>();
+        btn.onClick.AddListener(() => Conectar(endereco));
+    }
+
+    private void UpdateStatus(string msg)
+    {
+        statusMessageToUpdate = msg;
+        hasNewStatus = true;
+    }
+
     private void OnDestroy()
     {
-        if (bluetooth != null) bluetooth.Cleanup();
+        if (bluetooth != null)
+        {
+            bluetooth.Disconnect();
+            bluetooth.Cleanup();
+        }
     }
 }
