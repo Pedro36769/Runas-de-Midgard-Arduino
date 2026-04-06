@@ -17,7 +17,7 @@ MonoBehaviour:
   abilityDesc: "Hrothgar pode <b>Dilacerar</b> 3x por jogo, voc\xEA deve declarar
     que vai usar essa habilidade antes de um combate. Qualquer jogador que receber
     dano de Hrothgar fica incapaz de se curar por <b>2 rodadas</b>."
-  abilityDesc2: "Passiva: Colecionador de cr\xE2nios Sempre que matar um jogador,
+  abilityDesc2: "Passiva: <b>Colecionador de Cr\xE2nios</b> Sempre que matar um jogador,
     <color=#FFD900>+1 de Ataque</color> ou <color=#FF1111>+2 de Vida</color>."
   characterPortrait: {fileID: -646902602, guid: 7154cb21a06ae1941bb0be170ae54ba6, type: 3}
   portraitFg: {fileID: 533177413809491475, guid: 31537141433c5cd478f48081c74de063, type: 3}

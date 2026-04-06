@@ -83,7 +83,7 @@ public class SoundManager : MonoBehaviour
             songInstance.setParameterByName("snare", 0);
             songInstance.setParameterByName("tomLow", 0);
         }
-        else if(mode == "midGame") // round 4-5 && 7-8
+        if(mode == "midGame") // round 4-5 && 7-8
         {
             //guitar
             songInstance.setParameterByName("driveGuitar", 0);
@@ -99,7 +99,7 @@ public class SoundManager : MonoBehaviour
             songInstance.setParameterByName("snare", 0);
             songInstance.setParameterByName("tomLow", 0);
         }
-        else if(mode == "lateGame") // round 10-11
+        if(mode == "lateGame") // round 10-11
         {
             //guitar
             songInstance.setParameterByName("driveGuitar", 0);
@@ -115,7 +115,7 @@ public class SoundManager : MonoBehaviour
             songInstance.setParameterByName("snare", 0);
             songInstance.setParameterByName("tomLow", 1);
         }
-        else if(mode == "ragnarok")
+        if(mode == "ragnarok")
         {
             //guitar
             songInstance.setParameterByName("driveGuitar", 0);
@@ -131,7 +131,7 @@ public class SoundManager : MonoBehaviour
             songInstance.setParameterByName("snare", 0);
             songInstance.setParameterByName("tomLow", 1);
         }
-        else if(mode == "battle")
+        if(mode == "battle")
         {
             //guitar
             songInstance.setParameterByName("driveGuitar", 1);
@@ -145,6 +145,23 @@ public class SoundManager : MonoBehaviour
             songInstance.setParameterByName("kick", 1);
             songInstance.setParameterByName("snare", 1);
             songInstance.setParameterByName("tomLow", 1);
+        }
+        if(mode == "endGame") // só 1 jogador vivo
+        {
+            songInstance.setParameterByName("mandolin", 0);
+            //guitar
+            songInstance.setParameterByName("driveGuitar", 0);
+            //bass
+            songInstance.setParameterByName("bassGroove", 0);
+            songInstance.setParameterByName("bassStraight", 0);
+            //pads
+            songInstance.setParameterByName("foghorn", 1);
+            songInstance.setParameterByName("grandfatherPads", 1);
+            songInstance.setParameterByName("icePads", 0);
+            //drums
+            songInstance.setParameterByName("kick", 0);
+            songInstance.setParameterByName("snare", 0);
+            songInstance.setParameterByName("tomLow", 0);
         }
     }
 }

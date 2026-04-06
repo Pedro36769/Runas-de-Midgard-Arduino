@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Character
   playerName: "Eyd\xEDs"
   abilityTitle: "<b>Tecel\xE3 do Destino</b>"
-  abilityDesc: "Eyd\xEDs pode usar <b>\"Revelar\"</b> 2x por jogo. Revelar:"
-  abilityDesc2: "Todos devem falar em voz alta seus atributos atuais. OU Escolhe
-    uma runa de cada jogador, podendo ler a carta, por\xE9m n\xE3o pode revelar a
-    outros jogadores a carta lida."
+  abilityDesc: "Todos devem falar em voz alta seus <b>atributos atuais</b>. <b>OU</b>
+    Escolhe uma runa de cada jogador, podendo <b>ler</b> a carta, por\xE9m n\xE3o
+    pode revelar a outros jogadores a carta lida."
+  abilityDesc2: <color=#CCC>Pode ser usada 2 vezes por partida.</color>
   characterPortrait: {fileID: 1449826127, guid: 7154cb21a06ae1941bb0be170ae54ba6, type: 3}
   portraitFg: {fileID: 7928975339657845189, guid: 31537141433c5cd478f48081c74de063, type: 3}
   portraitBg: {fileID: 8674755150191113282, guid: 31537141433c5cd478f48081c74de063, type: 3}

@@ -15,11 +15,6 @@ public class PlayerPopUp : MonoBehaviour
     [SerializeField] private TMP_Text abilityDescText;
     [SerializeField] private TMP_Text abilityDesc2Text;
 
-    private void Awake()
-    {
-        this.gameObject.SetActive(false);
-    }
-
     public void SetupPopUp(Character charData)
     {
         portraitImage.sprite = charData.characterPortrait;

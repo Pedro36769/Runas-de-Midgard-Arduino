@@ -52,20 +52,27 @@ public class PlayerCardUI : MonoBehaviour
         //textos
         cardName = characterData.playerName;
         nameText.text = cardName;
-            
+
+        //inicializa os valores
         currentHp = characterData.health;
-        if(hpText!=null) hpText.text = currentHp.ToString();
-        if(inputHp!=null) inputHp.text = currentHp.ToString();
-
         currentDmg = characterData.damage;
-        if(dmgText!=null) dmgText.text = currentDmg.ToString();
-        if(inputDmg!=null) inputDmg.text = currentDmg.ToString();
-
         currentDef = characterData.defense;
-        if(defText!=null) defText.text = currentDef.ToString();
-        if(inputDef!=null) inputDef.text = currentDef.ToString();
+
+        UpdateValuesUI();
 
         if(popUp!=null) popUp.SetupPopUp(characterData);
+    }
+
+    private void UpdateValuesUI()
+    {
+        if(hpText!=null) hpText.text = currentHp.ToString();
+        if(inputHp!=null) inputHp.text = currentHp.ToString();
+   
+        if(dmgText!=null) dmgText.text = currentDmg.ToString();
+        if(inputDmg!=null) inputDmg.text = currentDmg.ToString();
+        
+        if(defText!=null) defText.text = currentDef.ToString();
+        if(inputDef!=null) inputDef.text = currentDef.ToString();
     }
 
     public void ChangeHealth(string inputtedHp)
@@ -82,6 +89,15 @@ public class PlayerCardUI : MonoBehaviour
         {
             inputHp.text = currentHp.ToString(); 
             Debug.LogWarning("Input inválido ou fora do limite (0-99)! Valor resetado para: " + currentHp);
+        }
+
+        if(currentHp == 0)
+        {
+            LockCard();
+        }
+        else
+        {
+            UnlockCard();
         }
     }
 
@@ -136,7 +152,6 @@ public class PlayerCardUI : MonoBehaviour
                 // a defesa é suficiente para absorver todo o dano
                 currentDef -= incomingDamage;
             }
-            Debug.Log("Defesa anterior: " + previousDef + ". Defesa atual: " + currentDef);
         }
         else // senão, reduz o HP diretamente
         {
@@ -146,38 +161,53 @@ public class PlayerCardUI : MonoBehaviour
         // garante q o hp n fique negativo
         currentHp = Mathf.Max(0, currentHp);
         
-        Debug.Log("Vida anterior: " + previousHp + ". Vida atual: " + currentHp);
-        Debug.Log("Player " + cardName + " sofreu um ataque de " + incomingDamage + " de poder.");
+        Debug.Log("Player " + cardName + " sofreu um ataque de " + incomingDamage + " de dano.");
 
-        ChangeHealth(currentHp.ToString());
+        UpdateValuesUI();
+        if(currentHp == 0)
+        {
+            LockCard();
+        }
     }
-    public void DestroyCard()
-    {
-        Destroy(this.gameObject);
-    }
+    
     public void LockCard()
     {
         lockObj.SetActive(true); 
         if(cardImage!=null) cardImage.sprite = lockedSprite;
+
         portraitFgImg.color = new Vector4(0.4f, 0.4f, 0.4f, 1);
         if(portraitBgImg!=null) portraitBgImg.color = new Vector4(0.4f, 0.4f, 0.4f, 1);
+        if(bannerImage!=null) bannerImage.color = new Vector4(0.4f, 0.4f, 0.4f, 1);
         portraitImage.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
-        nameText.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
-        defText.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
-        dmgText.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
-        hpText.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
-    }
 
+        nameText.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
+        if(defText!=null) defText.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
+        if(dmgText!=null) dmgText.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
+        if(hpText!=null) hpText.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
+    }
     public void UnlockCard()
     {
         lockObj.SetActive(false); 
         if(cardImage!=null) cardImage.sprite = characterData.characterCard;
+
         portraitFgImg.color = new Vector4(1, 1, 1, 1);
         if(portraitBgImg!=null) portraitBgImg.color = new Vector4(1, 1, 1, 1);
+        if(bannerImage!=null) bannerImage.color = new Vector4(1, 1, 1, 1);
         portraitImage.color = new Vector4(1, 1, 1, 1);
+
         nameText.color = new Vector4(1, 1, 1, 1);
-        defText.color = new Vector4(1, 1, 1, 1);
-        dmgText.color = new Vector4(1, 1, 1, 1);
-        hpText.color = new Vector4(1, 1, 1, 1);
+        if(defText!=null) defText.color = new Vector4(1, 1, 1, 1);
+        if(dmgText!=null) dmgText.color = new Vector4(1, 1, 1, 1);
+        if(hpText!=null) hpText.color = new Vector4(1, 1, 1, 1);
+    }
+
+    public void DestroyCard()
+    {
+        Destroy(this.gameObject);
+    }
+
+    public void OpenPopup()
+    {
+        popUp.gameObject.SetActive(true);
     }
 }

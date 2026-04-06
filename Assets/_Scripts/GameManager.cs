@@ -9,19 +9,24 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject openEventBtn;
     [SerializeField] private Image eventBtnImg;
     [SerializeField] private Image eventPopupIcon;
+    [SerializeField] private GameObject gameEndCanvas;
 
-    [Header ("Imagens")]
+    [Header("Eventos")]
     [SerializeField] private Sprite blizzardSprite;
+    [SerializeField] private ParticleSystem snowParticle;
     [SerializeField] private Sprite tidesOfMidgardSprite;
+    [SerializeField] private GameObject wavesObj;
     [SerializeField] private Sprite fenrirsHuntSprite;
+    [SerializeField] private GameObject fenrirObj;
+    [SerializeField] private TMP_Text currentEventText;
+    [SerializeField] private TMP_Text eventDurationText;
+    [SerializeField] private TMP_Text eventRoundCounter;
+    [SerializeField] private TMP_Text eventDescriptionText;
 
     [Header("Textos")]
     [SerializeField] private TMP_Text roundText;
     [SerializeField] private TMP_Text roundCounter;
     [SerializeField] private TMP_Text arenaText;
-    [SerializeField] private TMP_Text currentEventText;
-    [SerializeField] private TMP_Text eventDurationText;
-    [SerializeField] private TMP_Text eventDescriptionText;
 
     [Header("Player cards")]
     public PlayerCardUI player1Card;
@@ -43,6 +48,7 @@ public class GameManager : MonoBehaviour
     private Color bjornColor = new Vector4(0.03f, 0.09f, 0.11f, 1);
 
     private int currentRound = 1;
+    private bool gameEnded = false;
     private bool eventActive = false;
     private int eventDuration;
     private int lastEventEndRound = -4;
@@ -56,24 +62,14 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         //singleton
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
+        if (Instance != null && Instance != this) Destroy(this.gameObject);
+        else Instance = this; DontDestroyOnLoad(this.gameObject);
+
         ClearUITexts();
     }
 
     private void Start()
     {
-        if(SetupManager.Instance==null)
-        {
-            Debug.LogError("Não achei o SetupManager, começa a partir da cena Setup");
-        }
         player1Card.SetupCard(SetupManager.Instance.player1Char);
         player2Card.SetupCard(SetupManager.Instance.player2Char);
         if(SetupManager.Instance.twoPlayerMode) //se tiver só dois players, destrói as outras cartas
@@ -92,6 +88,10 @@ public class GameManager : MonoBehaviour
 
         eventPopUp.SetActive(false);
         openEventBtn.SetActive(false);
+
+        snowParticle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+        wavesObj.SetActive(false);
+        fenrirObj.SetActive(false);
     }
 
     public void NextRound()
@@ -102,7 +102,6 @@ public class GameManager : MonoBehaviour
         if (currentRound % 3 == 0 && currentRound != 0) //se divisível por 3, começa arena
         {
             arenaText.text = "É hora da batalha!";
-            SoundManager.Instance.PlaySFX("BattleStart");
             roundCounter.color = Color.red;
             SoundManager.Instance.SongControl("battle");
             inBattle = true;
@@ -121,7 +120,8 @@ public class GameManager : MonoBehaviour
                 {
                     eventActive = false;
                     openEventBtn.SetActive(false);
-                    lastEventEndRound = currentRound;
+
+                    lastEventEndRound = currentRound; //evento acabou nessa rodada
                     ClearUITexts();
                 }
                 else
@@ -130,26 +130,10 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            //só tenta criar novo evento se não for arena e não houver um ativo
-            if (!eventActive && currentRound > 2 && (currentRound - lastEventEndRound) > eventCooldown)
+            //só tenta criar novo evento se não for arena e não houver um ativo e não tiver acabado o jogo
+            if (!eventActive && currentRound > 2 && (currentRound - lastEventEndRound) > eventCooldown && !gameEnded)
             {
                 ChooseGlobalEvent();
-            }
-        }
-
-        if (eventActive)
-        {
-            eventDuration--;
-            if (eventDuration <= 0)
-            {
-                eventActive = false;
-                openEventBtn.SetActive(false);
-                lastEventEndRound = currentRound; //o evento acabou nessa rodada
-                ClearUITexts();
-            }
-            else
-            {
-                UpdateEventDuration();
             }
         }
 
@@ -160,15 +144,21 @@ public class GameManager : MonoBehaviour
 
         // sound control
         if(currentRound < 3 && !inBattle) SoundManager.Instance.SongControl("earlyGame");
-        else if(currentRound < 9 && !inBattle) SoundManager.Instance.SongControl("midGame");
-        else if(currentRound < 12 && !inBattle) SoundManager.Instance.SongControl("lateGame");
-        else if(currentRound > 12)
+        if(currentRound < 9 && !inBattle) SoundManager.Instance.SongControl("midGame");
+        if(currentRound < 12 && !inBattle) SoundManager.Instance.SongControl("lateGame");
+        if(currentRound > 12)
         {
             ragnarokActive = true;
             if(!inBattle)
             {
                 SoundManager.Instance.SongControl("ragnarok");
             }
+        }
+        if(BattleManager.Instance.alivePlayers.Count == 1) 
+        {
+            SoundManager.Instance.SongControl("endGame");
+            gameEnded = true;
+            gameEndCanvas.SetActive(gameEnded);
         }
     }
 
@@ -201,34 +191,40 @@ public class GameManager : MonoBehaviour
         { 
             chosenEvent = "Nevasca de Jotunheim"; 
             currentEventText.color = blizzardColor;
+            eventRoundCounter.color = blizzardColor;
             eventDescriptionText.text = "• Deslocamento reduzido pela metade. <br>• <color=#FFD900><b>-2 de Ataque</b></color> global (<color=#CCC>mínimo 1</color>).";
             
             eventBtnImg.sprite = blizzardSprite;
             eventPopupIcon.sprite = blizzardSprite;
 
             SoundManager.Instance.PlaySFX("Blizzard");
+            snowParticle.Play();
         }
         else if(eventN == 1) 
         { 
             chosenEvent = "Maré de Jörmungandr"; 
             currentEventText.color = tidesOfMidgardColor; 
+            eventRoundCounter.color = tidesOfMidgardColor;
             eventDescriptionText.text = "• Todas as <color=#FF3432><b>curas</b></color> recebem +5.<br>• <color=#00C8FF><b>Defesa</b></color> de todos reduzida em -3.";
 
             eventBtnImg.sprite = tidesOfMidgardSprite;
             eventPopupIcon.sprite = tidesOfMidgardSprite;
 
             SoundManager.Instance.PlaySFX("TidesSound");
+            wavesObj.SetActive(true);
         }
         else if(eventN == 2) 
         { 
             chosenEvent = "Caçada de Fenrir"; 
             currentEventText.color = fenrirsHuntColor; 
+            eventRoundCounter.color = fenrirsHuntColor;
             eventDescriptionText.text = "•  O jogador com maior <color=#FF3432><b>Vida</b></color> recebe <color=#FFD900><b>+2 de Ataque</b></color>.<br>• Esse mesmo jogador sofre <color=#00C8FF><b>-4 de Defesa</b></color>.";
 
             eventBtnImg.sprite = fenrirsHuntSprite;
             eventPopupIcon.sprite = fenrirsHuntSprite;
 
             SoundManager.Instance.PlaySFX("HuntSound");
+            fenrirObj.SetActive(true);
         }
 
         ShowEventPopUp(true);
@@ -240,12 +236,14 @@ public class GameManager : MonoBehaviour
     {
         string plural = eventDuration > 1 ? "s" : ""; //se for maior que 1, adiciona o 's'
         eventDurationText.text = $"O evento vai durar por: {eventDuration} rodada{plural}.";
+        eventRoundCounter.text = $"( {eventDuration} )";
     }
 
     public void ShowEventPopUp(bool show)
     {
         eventPopUp.SetActive(show);
         openEventBtn.SetActive(!show);
+        eventRoundCounter.text = !show ? $"( {eventDuration} )" : "";
     }
 
     private void ClearUITexts()
@@ -254,7 +252,12 @@ public class GameManager : MonoBehaviour
         if(!eventActive) //só limpa texto do evento se não tiver um evento ativo
         {
             eventDurationText.text = "";
+            eventRoundCounter.text = "";
             currentEventText.text = "";
+
+            snowParticle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+            wavesObj.SetActive(false);
+            fenrirObj.SetActive(false);
         }
     }
 }
