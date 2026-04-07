@@ -314,55 +314,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Eirik_Fg
-      rect:
-        serializedVersion: 2
-        x: 3292
-        y: 1199
-        width: 706
-        height: 768
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4624516cce8c14230800000000000000
-      internalID: 3621396494643708516
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Eirik_Bg
-      rect:
-        serializedVersion: 2
-        x: 2395
-        y: 1237
-        width: 771
-        height: 637
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5634f8d035bb6a840800000000000000
-      internalID: 5235077582248952677
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Asta_Bg
       rect:
         serializedVersion: 2
-        x: 2433
-        y: 3309
+        x: 2354
+        y: 3058
         width: 640
         height: 640
       alignment: 0
@@ -380,33 +336,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Asta_Fg
-      rect:
-        serializedVersion: 2
-        x: 3195
-        y: 3204
-        width: 840
-        height: 840
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ac7a40abecb2cf4fb900a77134502d4
-      internalID: -1017157587
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Clara_Bg
       rect:
         serializedVersion: 2
-        x: 2433
-        y: 2355
+        x: 2434
+        y: 1965
         width: 640
         height: 640
       alignment: 0
@@ -428,7 +362,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3259
-        y: 2275
+        y: 1885
         width: 805
         height: 802
       alignment: 0
@@ -441,6 +375,72 @@ TextureImporter:
       bones: []
       spriteID: 114dde0d7764c8143802c73c04efc658
       internalID: -2019196691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eirik_Fg
+      rect:
+        serializedVersion: 2
+        x: 3273
+        y: 791
+        width: 730
+        height: 768
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f14ab48b43d6ef41bf46a88bc864b89
+      internalID: 3621396494643708516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Eirik_Bg
+      rect:
+        serializedVersion: 2
+        x: 2458
+        y: 847
+        width: 640
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d18de85e7ec72074db03b724cd4ca219
+      internalID: 5235077582248952677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asta_Fg
+      rect:
+        serializedVersion: 2
+        x: 3089
+        y: 2872
+        width: 942
+        height: 1206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57127f805663858499b098a9ac62e018
+      internalID: -1017157587
       vertices: []
       indices: 
       edges: []
@@ -471,6 +471,7 @@ TextureImporter:
       Eirik_Fg: 3621396494643708516
       Eydis_Bg: 8674755150191113282
       Eydis_Fg: 7928975339657845189
+      Frames_1: -1412175070
       Frames_2: -458354573
       Frames_3: 3247480049785795267
       Frames_4: -2574069069278200224

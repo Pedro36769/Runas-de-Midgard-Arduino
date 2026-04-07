@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
     {
         //singleton
         if (Instance != null && Instance != this) Destroy(this.gameObject);
-        else Instance = this; DontDestroyOnLoad(this.gameObject);
+        else Instance = this;
 
         ClearUITexts();
     }

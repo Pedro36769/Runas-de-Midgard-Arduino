@@ -246,9 +246,9 @@ TextureImporter:
       name: Banner_Asta
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 2056
         y: 1000
-        width: 2048
+        width: 2040
         height: 1000
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -270,7 +270,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 1000
-        width: 2048
+        width: 2056
         height: 1000
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
