@@ -25,3 +25,6 @@ Cada LED, em seu brilho máximo, chega a uma corrente de 50mA. Portanto, o máxi
 
 **Módulo Bluetooth**: (`HC-06`)
 Escolhemos o HC-06 pois atua apenas como escravo. Os 3 resistores de 10kΩ são necessários para dividir a tensão.
+
+**Sensor de Toque**: (`Ttp223b`)
+Atua como botão.
