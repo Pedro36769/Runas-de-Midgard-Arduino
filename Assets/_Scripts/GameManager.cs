@@ -139,10 +139,10 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            //só tenta criar novo evento se não for arena e não houver um ativo e não tiver acabado o jogo
-            if (!eventActive && currentRound > 2 && (currentRound - lastEventEndRound) > eventCooldown && !gameEnded)
+            //só tenta criar novo evento se não for arena e não houver um ativo
+            if (!eventActive && currentRound > 2 && (currentRound - lastEventEndRound) > eventCooldown)
             {
-                ChooseGlobalEvent();
+                if (!gameEnded) ChooseGlobalEvent();
             }
         }
 
