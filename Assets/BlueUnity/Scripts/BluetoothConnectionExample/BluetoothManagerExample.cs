@@ -4,6 +4,7 @@ using System.Text;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; //MEU CÓDIGO
 
 public class BluetoothManagerExample : MonoBehaviour
 {
@@ -192,5 +193,9 @@ public class BluetoothManagerExample : MonoBehaviour
         bluetooth.Cleanup();
     }
 
-
+    // MEU CÓDIGO
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("Menu", LoadSceneMode.Single);
+    }
 }

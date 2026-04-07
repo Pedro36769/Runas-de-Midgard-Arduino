@@ -63,15 +63,6 @@ public class BattleManager : MonoBehaviour
         player2Card = GameManager.Instance.player2Card;
         player3Card = GameManager.Instance.player3Card;
         player4Card = GameManager.Instance.player4Card;
-
-        // player1Hp = player1Card.currentHp;
-        // player2Hp = player2Card.currentHp; 
-        
-        // if(!twoPlayers) 
-        // {
-        //     player3Hp = player3Card.currentHp; 
-        //     player4Hp = player4Card.currentHp; 
-        // }
         
         foreach (var btn in targetButtons) btn.gameObject.SetActive(false);
     }
@@ -200,11 +191,23 @@ public class BattleManager : MonoBehaviour
             }
         }
 
-        //limpa da lista quem morreu durante este round
-        alivePlayers.RemoveAll(player => player.currentHp <= 0);
-
         battleCanvas.SetActive(false);
         battleParticle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
         arenaResumeCanvas.SetActive(true);
+    }
+
+    public int GetAlivePlayersCount()
+    {
+        int count = 0;
+        if (player1Card.currentHp > 0) count++;
+        if (player2Card.currentHp > 0) count++;
+        
+        if (!twoPlayers)
+        {
+            if (player3Card.currentHp > 0) count++;
+            if (player4Card.currentHp > 0) count++;
+        }
+        
+        return count;
     }
 }

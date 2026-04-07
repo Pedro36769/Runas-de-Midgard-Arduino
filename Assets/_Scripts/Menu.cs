@@ -15,6 +15,7 @@ public class Menu : MonoBehaviour
     
     public void LoadBluetoothDebug()
     {
+        SoundManager.Instance.StopSong();
         SceneManager.LoadScene("BluetoothManagerExample", LoadSceneMode.Single);
     }
 

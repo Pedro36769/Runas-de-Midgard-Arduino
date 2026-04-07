@@ -8,8 +8,10 @@ public class PlayerCardUI : MonoBehaviour
     public Image portraitFgImg;
     public Image portraitBgImg;
     public Image bannerImage;
+    private Sprite bannerSprite;
     [SerializeField] private Image cardImage;
     [SerializeField] private Sprite lockedSprite;
+    [SerializeField] private Sprite lockedBanner;
     [SerializeField] private GameObject lockObj;
     [SerializeField] private TMP_Text nameText;
     public string cardName;
@@ -46,7 +48,8 @@ public class PlayerCardUI : MonoBehaviour
         portraitImage.sprite = characterData.characterPortrait;
         portraitFgImg.sprite = characterData.portraitFg;
         if(portraitBgImg!=null) portraitBgImg.sprite = characterData.portraitBg;
-        if(bannerImage!=null) bannerImage.sprite = characterData.characterBanner;
+        bannerSprite = characterData.characterBanner;
+        if(bannerImage!=null) bannerImage.sprite = bannerSprite;
         if(cardImage!=null) cardImage.sprite = characterData.characterCard;
 
         //textos
@@ -91,14 +94,8 @@ public class PlayerCardUI : MonoBehaviour
             Debug.LogWarning("Input inválido ou fora do limite (0-99)! Valor resetado para: " + currentHp);
         }
 
-        if(currentHp == 0)
-        {
-            LockCard();
-        }
-        else
-        {
-            UnlockCard();
-        }
+        if(currentHp == 0) LockCard();
+        else UnlockCard();
     }
 
     public void ChangeDamage(string inputtedDmg)
@@ -177,7 +174,7 @@ public class PlayerCardUI : MonoBehaviour
 
         portraitFgImg.color = new Vector4(0.4f, 0.4f, 0.4f, 1);
         if(portraitBgImg!=null) portraitBgImg.color = new Vector4(0.4f, 0.4f, 0.4f, 1);
-        if(bannerImage!=null) bannerImage.color = new Vector4(0.4f, 0.4f, 0.4f, 1);
+        if(bannerImage!=null) bannerImage.sprite = lockedBanner;
         portraitImage.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
 
         nameText.color = new Vector4(0.5f, 0.5f, 0.5f, 1);
@@ -192,7 +189,7 @@ public class PlayerCardUI : MonoBehaviour
 
         portraitFgImg.color = new Vector4(1, 1, 1, 1);
         if(portraitBgImg!=null) portraitBgImg.color = new Vector4(1, 1, 1, 1);
-        if(bannerImage!=null) bannerImage.color = new Vector4(1, 1, 1, 1);
+        if(bannerImage!=null) bannerImage.sprite = bannerSprite;
         portraitImage.color = new Vector4(1, 1, 1, 1);
 
         nameText.color = new Vector4(1, 1, 1, 1);
