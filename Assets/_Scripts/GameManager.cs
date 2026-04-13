@@ -263,6 +263,8 @@ public class GameManager : MonoBehaviour
 
             SoundManager.Instance.PlaySFX("Blizzard");
             snowParticle.Play();
+
+            ControlesCenaDois.Instance.Enviar("nevasca#");
         }
         else if(eventN == 1) 
         { 
@@ -276,6 +278,8 @@ public class GameManager : MonoBehaviour
 
             SoundManager.Instance.PlaySFX("TidesSound");
             wavesObj.SetActive(true);
+
+            ControlesCenaDois.Instance.Enviar("mare#");
         }
         else if(eventN == 2) 
         { 
@@ -289,6 +293,8 @@ public class GameManager : MonoBehaviour
 
             SoundManager.Instance.PlaySFX("HuntSound");
             fenrirObj.SetActive(true);
+
+            ControlesCenaDois.Instance.Enviar("hunt#");
         }
 
         ShowEventPopUp(true);

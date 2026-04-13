@@ -3,9 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    [SerializeField] private GameObject configObj;
+    [SerializeField] private GameObject infosObj;
+
     private void Start()
     {
         SoundManager.Instance.SongControl("earlyGame");
+        configObj.SetActive(false);
+        infosObj.SetActive(false);
     }
 
     public void LoadSetupScreen()
