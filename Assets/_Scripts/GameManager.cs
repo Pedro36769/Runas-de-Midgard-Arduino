@@ -6,6 +6,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private GameObject pauseCanvas;
 
     [Header("Game End")]
     [SerializeField] private GameObject gameEndCanvas;
@@ -97,6 +98,7 @@ public class GameManager : MonoBehaviour
 
         eventPopUp.SetActive(false);
         openEventBtn.SetActive(false);
+        pauseCanvas.SetActive(false);
 
         snowParticle.Stop(true, ParticleSystemStopBehavior.StopEmitting);
         wavesObj.SetActive(false);

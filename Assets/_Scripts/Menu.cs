@@ -13,10 +13,10 @@ public class Menu : MonoBehaviour
         infosObj.SetActive(false);
     }
 
-    public void LoadSetupScreen()
-    {
-        SceneManager.LoadScene("TelaSetup", LoadSceneMode.Single);
-    }
+    // public void LoadSetupScreen()
+    // {
+    //     SceneManager.LoadScene("TelaSetup", LoadSceneMode.Single);
+    // }
     
     public void LoadBluetoothDebug()
     {

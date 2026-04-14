@@ -40,9 +40,7 @@ public class ExampleBleInteractor : MonoBehaviour
     [Tooltip("Botão que inicia o scan de dispositivos")]
     private Button botaoScan;
 
-    [SerializeField]
-    [Tooltip("Texto que mostra o status da conexão (opcional)")]
-    private TMP_Text status;
+    [SerializeField] private TMP_Text status;
 
     [SerializeField]
     [Tooltip("Prefab do botão de dispositivo (se usar lista de dispositivos)")]
@@ -78,7 +76,7 @@ public class ExampleBleInteractor : MonoBehaviour
     // Flag indicando se está conectado
     private bool _isConnected = false;
 
-    // Constante para PlayerPrefs
+ // Constante para PlayerPrefs
     private const string PREF_NOME_BLUETOOTH = "nomeBlueTooth";
 
     #endregion
@@ -110,32 +108,39 @@ public class ExampleBleInteractor : MonoBehaviour
     private void Update()
     {
         // Atualiza timer de scan
-        if (_isScanning)
+if (_isScanning)
         {
-            _scanTimer += Time.deltaTime;
+_scanTimer += Time.deltaTime;
           
             // Mostra progresso
             float progresso = (_scanTimer / _scanTime) * 100f;
-            AtualizarStatus($"Procurando... {progresso:F0}%");
+    AtualizarStatus($"Procurando... {progresso:F0}%");
 
-            // Termina scan após tempo limite
+  // Termina scan após tempo limite
             if (_scanTimer > _scanTime)
             {
-                _scanTimer = 0f;
-                _isScanning = false;
+              _scanTimer = 0f;
+    _isScanning = false;
                 AtualizarStatus("Dispositivo não encontrado. Tente novamente.");
-                Debug.LogWarning($"⚠️ Scan finalizado. Dispositivo '{nomeBlueTooth}' não foi encontrado.");
+         Debug.LogWarning($"⚠️ Scan finalizado. Dispositivo '{nomeBlueTooth}' não foi encontrado.");
             }
         }
     }
 
     private void OnDestroy()
     {
+        // Remove listener ao destruir
         if (InputNomeBlueTooh != null)
         {
             InputNomeBlueTooh.onValueChanged.RemoveListener(OnInputFieldValueChanged);
         }
-    }
+
+        // Desconecta se estiver conectado
+        // if (_isConnected && _connectCommand != null)
+        // {
+        //     _connectCommand.Disconnect();
+        // }
+ }
 
     #endregion
 
@@ -148,7 +153,7 @@ public class ExampleBleInteractor : MonoBehaviour
     {
         nomeBlueTooth = novoNome;
         AtualizarTextoBotao();
-        Debug.Log($"Nome do dispositivo atualizado: {nomeBlueTooth}");
+        Debug.Log($"📝 Nome do dispositivo atualizado: {nomeBlueTooth}");
     }
 
     /// <summary>
@@ -157,29 +162,29 @@ public class ExampleBleInteractor : MonoBehaviour
     /// </summary>
     public void ScanForDevices()
     {
-    // Validações
+   // Validações
         if (string.IsNullOrEmpty(nomeBlueTooth))
         {
-            Debug.LogWarning("Nome do dispositivo vazio! Digite um nome válido.");
-            AtualizarStatus("Digite o nome do dispositivo!");
+            Debug.LogWarning("⚠️ Nome do dispositivo vazio! Digite um nome válido.");
+      AtualizarStatus("⚠️ Digite o nome do dispositivo!");
             return;
-        }
+     }
 
         if (_isScanning)
-        {
-            Debug.LogWarning("Scan já está em andamento!");
-            return;
+     {
+     Debug.LogWarning("⚠️ Scan já está em andamento!");
+      return;
         }
 
-        if (_isConnected)
-        {
-            Debug.LogWarning("Já está conectado a um dispositivo!");
-            return;
+      if (_isConnected)
+ {
+            Debug.LogWarning("⚠️ Já está conectado a um dispositivo!");
+     return;
         }
 
-        // Inicia scan
+ // Inicia scan
         Debug.Log($"🔍 Iniciando scan... Procurando por: {nomeBlueTooth}");
-        AtualizarStatus($"Procurando {nomeBlueTooth}...");
+        AtualizarStatus($"🔍 Procurando {nomeBlueTooth}...");
         
         _isScanning = true;
         _scanTimer = 0f;
@@ -187,14 +192,14 @@ public class ExampleBleInteractor : MonoBehaviour
         // Cria e enfileira comando de descoberta
         try
         {
-            DiscoverDevices comando = new DiscoverDevices(OnDeviceFound, _scanTime * 1000);
+        DiscoverDevices comando = new DiscoverDevices(OnDeviceFound, _scanTime * 1000);
             BleManager.Instance.QueueCommand(comando);
         }
-        catch (Exception ex)
+    catch (Exception ex)
         {
-            Debug.LogError($"❌ Erro ao iniciar scan: {ex.Message}");
-            AtualizarStatus($"❌ Erro: {ex.Message}");
-            _isScanning = false;
+  Debug.LogError($"❌ Erro ao iniciar scan: {ex.Message}");
+       AtualizarStatus($"❌ Erro: {ex.Message}");
+ _isScanning = false;
         }
     }
 
@@ -350,28 +355,28 @@ _isConnected = true;
     /// <param name="cena">Nome da cena de destino</param>
     public void OnNavega(string cena)
     {
-  if (string.IsNullOrEmpty(cena))
-   {
-      Debug.LogError("❌ Nome da cena vazio!");
-    return;
+        if (string.IsNullOrEmpty(cena))
+        {
+            Debug.LogError("Nome da cena vazio!");
+            return;
         }
 
-     Debug.Log($"🚀 Navegando para cena: {cena}");
+        Debug.Log($"Navegando para cena: {cena}");
 
         // Salva nome do dispositivo
- SalvarNome();
+        SalvarNome();
 
         // Desativa este GameObject mas mantém o BleManager vivo
         gameObject.SetActive(false);
 
-     // Carrega próxima cena
+        // Carrega próxima cena
         try
         {
             SceneManager.LoadScene(cena);
-   }
+        }
         catch (Exception ex)
         {
-Debug.LogError($"❌ Erro ao carregar cena '{cena}': {ex.Message}");
+            Debug.LogError($"❌ Erro ao carregar cena '{cena}': {ex.Message}");
             gameObject.SetActive(true); // Reativa em caso de erro
         }
     }
@@ -399,7 +404,7 @@ Debug.LogError($"❌ Erro ao carregar cena '{cena}': {ex.Message}");
         else
         {
             nomeBlueTooth = "MIDGARD"; // Nome padrão
-            Debug.Log($"Usando nome padrão: {nomeBlueTooth}");
+            Debug.Log($"💾 Usando nome padrão: {nomeBlueTooth}");
         }
     }
 
@@ -410,7 +415,7 @@ Debug.LogError($"❌ Erro ao carregar cena '{cena}': {ex.Message}");
     {
         PlayerPrefs.SetString(PREF_NOME_BLUETOOTH, nomeBlueTooth);
         PlayerPrefs.Save();
-        Debug.Log($"Nome salvo: {nomeBlueTooth}");
+        Debug.Log($"💾 Nome salvo: {nomeBlueTooth}");
     }
 
     /// <summary>
@@ -438,7 +443,7 @@ Debug.LogError($"❌ Erro ao carregar cena '{cena}': {ex.Message}");
         if (status != null)
         {
             status.text = mensagem;
-        }
+  }
 
         Debug.Log($"[Status] {mensagem}");
     }

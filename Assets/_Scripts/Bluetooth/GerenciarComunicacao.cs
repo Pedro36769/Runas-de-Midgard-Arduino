@@ -9,11 +9,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// Gerencia a comunicação bidirecional com o dispositivo BLE.
+/// Gerencia a comunicaï¿½ï¿½o bidirecional com o dispositivo BLE.
 /// 
 /// <para><b>Responsabilidades:</b></para>
 /// <list type="bullet">
-/// <item>Inscrever para receber notificações do dispositivo</item>
+/// <item>Inscrever para receber notificaï¿½ï¿½es do dispositivo</item>
 /// <item>Enviar comandos para o dispositivo</item>
 /// <item>Processar dados recebidos</item>
 /// <item>Notificar outros scripts sobre dados recebidos</item>
@@ -21,12 +21,12 @@ using UnityEngine.UI;
 /// 
 /// <para><b>?? Importante:</b></para>
 /// <list type="bullet">
-/// <item>BLE suporta no máximo 20 bytes por transmissão</item>
+/// <item>BLE suporta no mï¿½ximo 20 bytes por transmissï¿½o</item>
 /// <item>Use delimitadores claros (ex: ';', '\n') para separar dados</item>
 /// <item>Este GameObject deve persistir entre cenas (DontDestroyOnLoad)</item>
 /// </list>
 /// 
-/// <para><b>Formato de dados padrão:</b></para>
+/// <para><b>Formato de dados padrï¿½o:</b></para>
 /// <code>
 /// Arduino/ESP32 envia: "25.5;60.2\n" (temperatura;umidade)
 /// Unity recebe array: ["25.5", "60.2"]
@@ -36,16 +36,12 @@ public class GerenciarComunicacao : MonoBehaviour
 {
     #region Inspector Fields
 
-    [Header("Configuração BLE")]
     [SerializeField]
-    [Tooltip("UUID do serviço BLE (padrão: ffe0)")]
     private string _servico = "ffe0";
 
     [SerializeField]
-    [Tooltip("UUID da característica BLE (padrão: ffe1)")]
     private string _caracteristica = "ffe1";
 
-    [Header("Configuração de Dados")]
     [SerializeField]
     [Tooltip("Caractere usado para separar dados recebidos")]
     private char _separadorDados = ';';
@@ -56,14 +52,12 @@ public class GerenciarComunicacao : MonoBehaviour
 
     [Header("Debug")]
     [SerializeField]
-    [Tooltip("Mostra logs detalhados de comunicação")]
     private bool _modoDebug = true;
 
     #endregion
 
     #region Private Fields
 
-    // Comando de subscrição ativo
     public SubscribeToCharacteristic sb;
 
     // UUID do dispositivo conectado
@@ -75,7 +69,7 @@ public class GerenciarComunicacao : MonoBehaviour
   // Buffer para dados fragmentados (BLE envia em pacotes pequenos)
     private StringBuilder _bufferRecepcao = new StringBuilder();
 
-    // Estatísticas
+    // Estatï¿½sticas
     private int _totalMensagensRecebidas = 0;
     private int _totalMensagensEnviadas = 0;
     private DateTime _ultimaMensagemRecebida;
@@ -87,13 +81,11 @@ public class GerenciarComunicacao : MonoBehaviour
 
     private void Start()
     {
-        // Impede que este GameObject seja destruído ao trocar de cena
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
         // Impede que a tela desligue durante uso BLE
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
 
-        // Valida configuração
         ValidarConfiguracao();
 
         LogDebug("? GerenciarComunicacao iniciado");
@@ -101,22 +93,21 @@ public class GerenciarComunicacao : MonoBehaviour
 
     private void OnDestroy()
     {
-        // Desinscreve do serviço BLE ao destruir
         if (sb != null)
         {
-     try
-        {
-    sb.End();
-    LogDebug("?? Desinscrito do serviço BLE");
+            try
+            {
+                sb.End();
+                LogDebug("?? Desinscrito do serviï¿½o BLE");
             }
-         catch (Exception ex)
-     {
-        Debug.LogError($"? Erro ao desinscrever: {ex.Message}");
-     }
-  }
+            catch (Exception ex)
+            {
+                Debug.LogError($"? Erro ao desinscrever: {ex.Message}");
+            }
+        }
 
-        // Restaura configuração de tela
-    Screen.sleepTimeout = SleepTimeout.SystemSetting;
+        // Restaura configuraï¿½ï¿½o de tela
+        Screen.sleepTimeout = SleepTimeout.SystemSetting;
     }
 
     #endregion
@@ -124,24 +115,24 @@ public class GerenciarComunicacao : MonoBehaviour
     #region Configuration
 
     /// <summary>
-    /// Valida a configuração do componente.
+    /// Valida a configuraï¿½ï¿½o do componente.
     /// </summary>
     private void ValidarConfiguracao()
-  {
+    {
         if (string.IsNullOrEmpty(_servico))
         {
-       Debug.LogError("? UUID do serviço não configurado!");
+            Debug.LogError("? UUID do serviï¿½o nï¿½o configurado!");
         }
 
         if (string.IsNullOrEmpty(_caracteristica))
-   {
-            Debug.LogError("? UUID da característica não configurado!");
+        {
+            Debug.LogError("? UUID da caracterï¿½stica nï¿½o configurado!");
         }
 
-  LogDebug($"?? Configuração BLE:\n" +
-            $"   Serviço: {_servico}\n" +
-       $"   Característica: {_caracteristica}\n" +
-    $"   Separador: '{_separadorDados}'");
+        LogDebug($"?? Configuraï¿½ï¿½o BLE:\n" +
+            $"   Serviï¿½o: {_servico}\n" +
+       $"   Caracterï¿½stica: {_caracteristica}\n" +
+        $"   Separador: '{_separadorDados}'");
     }
 
     #endregion
@@ -149,28 +140,28 @@ public class GerenciarComunicacao : MonoBehaviour
     #region BLE Subscription
 
     /// <summary>
-    /// Inscreve para receber notificações de um serviço BLE específico.
+    /// Inscreve para receber notificaï¿½ï¿½es de um serviï¿½o BLE especï¿½fico.
     /// 
     /// <para><b>?? Importante:</b></para>
     /// <list type="bullet">
-    /// <item>Chame este método apenas após conexão bem-sucedida</item>
-    /// <item>O dispositivo BLE deve suportar notificações na característica</item>
+    /// <item>Chame este mï¿½todo apenas apï¿½s conexï¿½o bem-sucedida</item>
+    /// <item>O dispositivo BLE deve suportar notificaï¿½ï¿½es na caracterï¿½stica</item>
     /// <item>Cada dado recebido dispara o callback <see cref="Receber"/></item>
     /// </list>
     /// </summary>
     /// <param name="_dvcUuid">UUID do dispositivo BLE conectado</param>
     public void SubscribeServico(string _dvcUuid)
     {
-        // Validações
+        // Validaï¿½ï¿½es
         if (string.IsNullOrEmpty(_dvcUuid))
  {
-            Debug.LogError("? UUID do dispositivo vazio! Não é possível inscrever.");
+            Debug.LogError("? UUID do dispositivo vazio! Nï¿½o ï¿½ possï¿½vel inscrever.");
        return;
         }
 
         if (sb != null)
         {
-     Debug.LogWarning("?? Já está inscrito! Cancelando inscrição anterior.");
+     Debug.LogWarning("?? Jï¿½ estï¿½ inscrito! Cancelando inscriï¿½ï¿½o anterior.");
             sb.End();
             sb = null;
         }
@@ -180,12 +171,12 @@ public class GerenciarComunicacao : MonoBehaviour
 
         try
         {
-   LogDebug($"?? Inscrevendo no serviço BLE...\n" +
+   LogDebug($"?? Inscrevendo no serviï¿½o BLE...\n" +
          $"   Dispositivo: {_deviceUuid}\n" +
-                     $"   Serviço: {_servico}\n" +
-  $"   Característica: {_caracteristica}");
+                     $"   Serviï¿½o: {_servico}\n" +
+  $"   Caracterï¿½stica: {_caracteristica}");
 
- // Cria comando de subscrição
+ // Cria comando de subscriï¿½ï¿½o
    sb = new SubscribeToCharacteristic(
           _deviceUuid,
          _servico,
@@ -197,23 +188,23 @@ public class GerenciarComunicacao : MonoBehaviour
     BleManager.Instance.QueueCommand(sb);
         sb.Start();
 
-  LogDebug("? Inscrição realizada com sucesso!");
+  LogDebug("? Inscriï¿½ï¿½o realizada com sucesso!");
    }
         catch (Exception ex)
         {
-    Debug.LogError($"? Erro ao inscrever no serviço BLE: {ex.Message}");
+    Debug.LogError($"? Erro ao inscrever no serviï¿½o BLE: {ex.Message}");
      sb = null;
         }
     }
 
     /// <summary>
-    /// Cancela a inscrição do serviço BLE.
+    /// Cancela a inscriï¿½ï¿½o do serviï¿½o BLE.
     /// </summary>
 public void UnsubscribeServico()
     {
         if (sb == null)
         {
-       Debug.LogWarning("?? Não está inscrito em nenhum serviço!");
+       Debug.LogWarning("?? Nï¿½o estï¿½ inscrito em nenhum serviï¿½o!");
      return;
         }
 
@@ -221,7 +212,7 @@ public void UnsubscribeServico()
         {
         sb.End();
      sb = null;
-            LogDebug("?? Desinscrito do serviço BLE");
+            LogDebug("?? Desinscrito do serviï¿½o BLE");
         }
         catch (Exception ex)
         {
@@ -236,10 +227,10 @@ public void UnsubscribeServico()
 /// <summary>
   /// Envia dados para o dispositivo BLE.
     /// 
-  /// <para><b>?? Limitações do BLE:</b></para>
+  /// <para><b>?? Limitaï¿½ï¿½es do BLE:</b></para>
     /// <list type="bullet">
- /// <item>Máximo de 20 bytes por transmissão (incluindo '\n')</item>
-    /// <item>Se exceder, os dados serão truncados</item>
+ /// <item>Mï¿½ximo de 20 bytes por transmissï¿½o (incluindo '\n')</item>
+    /// <item>Se exceder, os dados serï¿½o truncados</item>
     /// <item>Use <see cref="EnviarDadosGrandes"/> para dados maiores</item>
     /// </list>
     /// 
@@ -252,10 +243,10 @@ public void UnsubscribeServico()
     /// <param name="value">String a ser enviada</param>
     public void Enviar(string value)
     {
-        // Validações
+        // Validaï¿½ï¿½es
         if (string.IsNullOrEmpty(_deviceUuid))
  {
-         Debug.LogError("? Dispositivo não conectado! Conecte-se primeiro.");
+         Debug.LogError("? Dispositivo nï¿½o conectado! Conecte-se primeiro.");
        return;
         }
 
@@ -273,7 +264,7 @@ public void UnsubscribeServico()
     // Converte para bytes ASCII
  byte[] msg = Encoding.ASCII.GetBytes(dadosParaEnviar);
 
-      // Verifica tamanho (BLE permite máx. 20 bytes)
+      // Verifica tamanho (BLE permite mï¿½x. 20 bytes)
   if (msg.Length > 20)
   {
            Debug.LogWarning($"?? AVISO: Dados excedem 20 bytes ({msg.Length} bytes)!\n" +
@@ -293,7 +284,7 @@ public void UnsubscribeServico()
 
        w.Start();
 
-       // Atualiza estatísticas
+       // Atualiza estatï¿½sticas
     _totalMensagensEnviadas++;
    _ultimaMensagemEnviada = DateTime.Now;
 
@@ -307,7 +298,7 @@ public void UnsubscribeServico()
 
     /// <summary>
     /// Envia dados grandes fragmentando em pacotes de 20 bytes.
-    /// Use para mensagens longas que não cabem em um único pacote BLE.
+    /// Use para mensagens longas que nï¿½o cabem em um ï¿½nico pacote BLE.
     /// </summary>
     /// <param name="value">String longa a ser enviada</param>
     /// <param name="intervalo">Intervalo entre pacotes (segundos)</param>
@@ -367,7 +358,7 @@ public void UnsubscribeServico()
          // Converte bytes para string ASCII
             string dadosRecebidos = Encoding.ASCII.GetString(value);
 
-  // Atualiza estatísticas
+  // Atualiza estatï¿½sticas
  _totalMensagensRecebidas++;
             _ultimaMensagemRecebida = DateTime.Now;
 
@@ -386,11 +377,11 @@ public void UnsubscribeServico()
             ProcessarMensagem(buffer);
                 _bufferRecepcao.Clear();
           }
-    // Se não tem \n mas passou certo tempo, processa assim mesmo
-            // (alguns dispositivos não enviam \n)
+    // Se nï¿½o tem \n mas passou certo tempo, processa assim mesmo
+            // (alguns dispositivos nï¿½o enviam \n)
        else if (buffer.Length > 0)
      {
-                // Processa após pequeno delay para garantir que recebeu tudo
+                // Processa apï¿½s pequeno delay para garantir que recebeu tudo
          StartCoroutine(ProcessarBufferComDelay(0.1f));
 }
      }
@@ -438,7 +429,7 @@ private void ProcessarMensagem(string mensagem)
     #region Observer Pattern
 
     /// <summary>
-    /// Registra uma função callback para receber dados processados.
+    /// Registra uma funï¿½ï¿½o callback para receber dados processados.
     /// 
     /// <para><b>Exemplo de uso:</b></para>
     /// <code>
@@ -452,11 +443,11 @@ private void ProcessarMensagem(string mensagem)
     /// {
     ///     float temperatura = float.Parse(dados[0]);
     ///     float umidade = float.Parse(dados[1]);
-    ///     Debug.Log($"Temp: {temperatura}°C, Umid: {umidade}%");
+    ///     Debug.Log($"Temp: {temperatura}ï¿½C, Umid: {umidade}%");
     /// }
   /// </code>
     /// </summary>
- /// <param name="funcao">Função que receberá os dados como array de strings</param>
+ /// <param name="funcao">Funï¿½ï¿½o que receberï¿½ os dados como array de strings</param>
     public void RegistraRecebedor(Action<String[]> funcao)
     {
   if (funcao == null)
@@ -466,16 +457,16 @@ private void ProcessarMensagem(string mensagem)
         }
 
         Recebedor = funcao;
-        LogDebug($"? Callback de recepção registrado: {funcao.Method.Name}");
+        LogDebug($"? Callback de recepï¿½ï¿½o registrado: {funcao.Method.Name}");
     }
 
     /// <summary>
-    /// Remove o callback de recepção.
+    /// Remove o callback de recepï¿½ï¿½o.
  /// </summary>
     public void DesregistraRecebedor()
     {
       Recebedor = null;
-        LogDebug("?? Callback de recepção removido");
+        LogDebug("?? Callback de recepï¿½ï¿½o removido");
     }
 
     #endregion
@@ -483,26 +474,26 @@ private void ProcessarMensagem(string mensagem)
     #region Statistics & Debug
 
     /// <summary>
-    /// Retorna estatísticas de comunicação.
+    /// Retorna estatï¿½sticas de comunicaï¿½ï¿½o.
     /// </summary>
     public string ObterEstatisticas()
     {
-        return $"?? Estatísticas de Comunicação:\n" +
+        return $"?? Estatï¿½sticas de Comunicaï¿½ï¿½o:\n" +
           $"   Mensagens Recebidas: {_totalMensagensRecebidas}\n" +
                $"   Mensagens Enviadas: {_totalMensagensEnviadas}\n" +
-               $"   Última Recebida: {_ultimaMensagemRecebida:HH:mm:ss}\n" +
-  $"   Última Enviada: {_ultimaMensagemEnviada:HH:mm:ss}\n" +
+               $"   ï¿½ltima Recebida: {_ultimaMensagemRecebida:HH:mm:ss}\n" +
+  $"   ï¿½ltima Enviada: {_ultimaMensagemEnviada:HH:mm:ss}\n" +
 $"   Dispositivo: {(_deviceUuid ?? "Nenhum")}";
   }
 
     /// <summary>
-    /// Reseta estatísticas.
+    /// Reseta estatï¿½sticas.
     /// </summary>
  public void ResetarEstatisticas()
  {
      _totalMensagensRecebidas = 0;
         _totalMensagensEnviadas = 0;
-        LogDebug("?? Estatísticas resetadas");
+        LogDebug("?? Estatï¿½sticas resetadas");
     }
 
     /// <summary>
@@ -521,7 +512,7 @@ $"   Dispositivo: {(_deviceUuid ?? "Nenhum")}";
     #region Public Getters
 
     /// <summary>
-    /// Retorna true se está inscrito em um serviço BLE.
+    /// Retorna true se estï¿½ inscrito em um serviï¿½o BLE.
     /// </summary>
     public bool EstaInscrito => sb != null;
 

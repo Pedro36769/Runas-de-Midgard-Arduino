@@ -971,7 +971,6 @@ RectTransform:
   - {fileID: 1415701874}
   - {fileID: 1169807121}
   - {fileID: 681813560}
-  - {fileID: 1318449701}
   - {fileID: 1338366926}
   - {fileID: 1494926812}
   - {fileID: 343128274}
@@ -3425,7 +3424,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Status: '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: faa4c391776212848a5e6cc097d5b603, type: 2}
   m_sharedMaterial: {fileID: -5744608052317140583, guid: faa4c391776212848a5e6cc097d5b603, type: 2}
@@ -3452,7 +3451,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 49.3
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11738,8 +11737,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 322.6, y: -53.1}
-  m_SizeDelta: {x: -686.672, y: 50}
+  m_AnchoredPosition: {x: 252.63, y: -53.099976}
+  m_SizeDelta: {x: -546.74, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &941643854
 MonoBehaviour:
@@ -11761,7 +11760,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: v0.3.10
+  m_text: v1.0.0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: faa4c391776212848a5e6cc097d5b603, type: 2}
   m_sharedMaterial: {fileID: -5744608052317140583, guid: faa4c391776212848a5e6cc097d5b603, type: 2}
@@ -11788,14 +11787,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 35.1
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -14144,7 +14143,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1318449701}
   - component: {fileID: 1318449702}
-  - component: {fileID: 1318449703}
   m_Layer: 0
   m_Name: Gerenciamento BlueTooth
   m_TagString: Untagged
@@ -14161,16 +14159,16 @@ RectTransform:
   m_GameObject: {fileID: 1318449700}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.1746035, y: 3.1746035, z: 3.1746035}
+  m_LocalScale: {x: 0.9523811, y: 0.9523811, z: 0.9523811}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 551723258}
   - {fileID: 1571267227}
-  m_Father: {fileID: 120689997}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0024719238, y: -0.0024719238}
+  m_AnchoredPosition: {x: 126.00063, y: 266.1743}
   m_SizeDelta: {x: 252, y: 504}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1318449702
@@ -14180,23 +14178,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318449700}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 789a0d3e11397714a89a3fd485a4862e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1318449703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1318449700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e77eff6359c4c408cb357455449c0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::NaoDestruirNoCarregamento
 --- !u!1 &1332170831
 GameObject:
   m_ObjectHideFlags: 0
@@ -17285,14 +17271,14 @@ RectTransform:
   m_GameObject: {fileID: 1571267226}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.60000014, y: 0.60000014, z: 0.60000014}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1318449701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 133.33337, y: 1122.2937}
+  m_AnchoredPosition: {x: 133.33337, y: 1122.2936}
   m_SizeDelta: {x: 799.9999, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1571267228
@@ -17306,7 +17292,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e0e0cc271d670b4ead24a1f07896085, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::GerenciarComunicacaoClassic
   _servico: ffe0
   _caracteristica: ffe1
   _separadorDados: 59
@@ -17996,7 +17982,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1725761078}
   - component: {fileID: 1725761080}
-  - component: {fileID: 1725761079}
   m_Layer: 0
   m_Name: BleAdapter
   m_TagString: Untagged
@@ -18019,18 +18004,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 551723258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1725761079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725761077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0a62ed5921560d43b9a5b7730ab3f95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1725761080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18046,7 +18019,7 @@ MonoBehaviour:
   UnityOnMessageReceived:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1725761079}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SendReceiveUnity, Assembly-CSharp
         m_MethodName: Receber
         m_Mode: 1
@@ -18061,7 +18034,7 @@ MonoBehaviour:
   UnityOnErrorReceived:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1725761079}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SendReceiveUnity, Assembly-CSharp
         m_MethodName: Receber
         m_Mode: 1
@@ -19839,7 +19812,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0.0050354004, y: 0}
+  m_AnchoredPosition: {x: 0.005065918, y: 0}
   m_SizeDelta: {x: -1600, y: 524.786}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1963421732
@@ -20913,16 +20886,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 228584946}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: LoadSetupScreen
-        m_Mode: 1
+      - m_Target: {fileID: 1494926813}
+        m_TargetAssemblyTypeName: ExampleBleInteractor, Assembly-CSharp
+        m_MethodName: OnNavega
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: TelaSetup
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2104134418
@@ -21267,3 +21240,4 @@ SceneRoots:
   - {fileID: 636471396}
   - {fileID: 738170995}
   - {fileID: 394353069}
+  - {fileID: 1318449701}
