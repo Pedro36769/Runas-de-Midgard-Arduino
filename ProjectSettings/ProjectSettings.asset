@@ -147,7 +147,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 1.0.0
+  bundleVersion: 1.0.1
   preloadedAssets:
   - {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   metroInputSource: 0
@@ -304,7 +304,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: d4d3178651ed9f34392fe9dac5b8953c, type: 3}
+      m_Icon: {fileID: 2800000, guid: d7949d95853512d4f809f99ccae8096d, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -469,8 +469,8 @@ PlayerSettings:
       m_Kind: 0
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 1ba44df4fac111a4088371b76b753f51, type: 3}
-      - {fileID: 2800000, guid: 8cfab43e0469fd64884662eab8310298, type: 3}
+      - {fileID: 2800000, guid: ac6b30df91319514d98ecc26f2d56b42, type: 3}
+      - {fileID: 2800000, guid: 63cbbcdf530286c4d9b10f834bf6445f, type: 3}
       m_Width: 432
       m_Height: 432
       m_Kind: 2
